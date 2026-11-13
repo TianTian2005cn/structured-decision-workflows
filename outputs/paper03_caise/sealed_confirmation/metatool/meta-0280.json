@@ -1,0 +1,26 @@
+{
+  "id": "meta-0280",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "WeatherTool"
+    ],
+    "topk": [
+      "CourseTool",
+      "WeatherTool"
+    ],
+    "v2_cover": [
+      "CourseTool",
+      "WeatherTool"
+    ],
+    "v2_route": [
+      "CourseTool",
+      "WeatherTool"
+    ]
+  },
+  "gold": [
+    "CourseTool",
+    "WeatherTool"
+  ],
+  "requests": 2
+}

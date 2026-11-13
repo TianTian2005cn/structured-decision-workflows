@@ -1,0 +1,27 @@
+{
+  "id": "meta-0376",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "JobTool",
+      "WeatherTool"
+    ],
+    "topk": [
+      "JobTool",
+      "WeatherTool"
+    ],
+    "v2_cover": [
+      "JobTool",
+      "WeatherTool"
+    ],
+    "v2_route": [
+      "JobTool",
+      "WeatherTool"
+    ]
+  },
+  "gold": [
+    "JobTool",
+    "WeatherTool"
+  ],
+  "requests": 2
+}

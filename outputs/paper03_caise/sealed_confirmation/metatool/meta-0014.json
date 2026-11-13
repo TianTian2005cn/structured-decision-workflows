@@ -1,0 +1,27 @@
+{
+  "id": "meta-0014",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "FinanceTool",
+      "TripAdviceTool"
+    ],
+    "topk": [
+      "FinanceTool",
+      "TripAdviceTool"
+    ],
+    "v2_cover": [
+      "FinanceTool",
+      "TripAdviceTool"
+    ],
+    "v2_route": [
+      "FinanceTool",
+      "TripAdviceTool"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "TripTool"
+  ],
+  "requests": 2
+}

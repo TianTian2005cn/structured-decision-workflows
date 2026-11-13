@@ -1,0 +1,82 @@
+{
+  "id": "order-20261107-020",
+  "difficulty": "distractors",
+  "gold": [
+    "add_gift_wrap",
+    "apply_coupon",
+    "check_stock",
+    "compute_total",
+    "invoice_pdf",
+    "load_order",
+    "ship_freight",
+    "tax_export_exempt"
+  ],
+  "selections": {
+    "topk": [
+      "add_gift_wrap",
+      "apply_coupon",
+      "check_stock",
+      "compute_total",
+      "invoice_pdf",
+      "load_order",
+      "load_order_archive",
+      "ship_freight",
+      "tax_export_exempt"
+    ],
+    "route": [
+      "add_gift_wrap",
+      "apply_coupon",
+      "check_stock",
+      "compute_total",
+      "invoice_pdf",
+      "load_order",
+      "ship_freight",
+      "tax_export_exempt"
+    ],
+    "route_constraints_off": [
+      "add_gift_wrap",
+      "apply_coupon",
+      "check_stock",
+      "compute_total",
+      "invoice_pdf",
+      "load_order",
+      "ship_freight",
+      "tax_export_exempt"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 0.0,
+      "valid": false,
+      "error": "infeasible set or no legal execution order"
+    },
+    "topk_recovery": {
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 8.0,
+      "valid": true,
+      "error": null
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 8.0,
+      "replanned": false
+    },
+    "route_constraints_off_static": {
+      "success": true,
+      "total_cost": 8.0,
+      "valid": true,
+      "error": null
+    },
+    "route_constraints_off_recovery": {
+      "success": true,
+      "total_cost": 8.0,
+      "replanned": false
+    }
+  }
+}

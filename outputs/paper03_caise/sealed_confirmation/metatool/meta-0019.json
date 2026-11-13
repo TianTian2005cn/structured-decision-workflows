@@ -1,0 +1,27 @@
+{
+  "id": "meta-0019",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "FinanceTool",
+      "MusicTool"
+    ],
+    "topk": [
+      "FinanceTool",
+      "MusicTool"
+    ],
+    "v2_cover": [
+      "FinanceTool",
+      "MusicTool"
+    ],
+    "v2_route": [
+      "FinanceTool",
+      "MusicTool"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "MusicTool"
+  ],
+  "requests": 2
+}

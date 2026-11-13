@@ -1,0 +1,25 @@
+{
+  "id": "workflow-20261031-251",
+  "difficulty": "read_failure",
+  "request_text": "Please compute the median net (refund-adjusted) transaction value in USD for the North region over the whole ledger period, counting settled transactions only, delivered as a CSV report.",
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 1.0
+    },
+    "topk_recovery": {
+      "success": true,
+      "total_cost": 9.0,
+      "replanned": true
+    },
+    "route_static": {
+      "success": false,
+      "total_cost": 1.0
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 9.0,
+      "replanned": true
+    }
+  }
+}

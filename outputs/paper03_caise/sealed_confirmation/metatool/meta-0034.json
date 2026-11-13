@@ -1,0 +1,27 @@
+{
+  "id": "meta-0034",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "FinanceTool",
+      "JobTool"
+    ],
+    "topk": [
+      "FinanceTool",
+      "JobTool"
+    ],
+    "v2_cover": [
+      "FinanceTool",
+      "JobTool"
+    ],
+    "v2_route": [
+      "FinanceTool",
+      "JobTool"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "JobTool"
+  ],
+  "requests": 2
+}

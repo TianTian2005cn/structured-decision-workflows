@@ -1,0 +1,59 @@
+workflow 8 / 96 new HTTP 10
+workflow 16 / 96 new HTTP 21
+workflow 24 / 96 new HTTP 32
+workflow 32 / 96 new HTTP 44
+workflow 40 / 96 new HTTP 52
+Traceback (most recent call last):
+  File "<repo>/jevset/backend.py", line 97, in _request
+    with urlopen(request, timeout=self.timeout) as response:
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 402: Payment Required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<repo>/scripts/run_sealed_confirmation.py", line 130, in <module>
+    if __name__=='__main__':main()
+  File "<repo>/scripts/run_sealed_confirmation.py", line 127, in main
+    if 'workflow' in sys.argv:run_workflow()
+  File "<repo>/scripts/run_sealed_confirmation.py", line 77, in run_workflow
+    before=len(b.records);chosen=selector(t.sample,mode);sel[mode]=sorted(chosen)
+  File "<repo>/scripts/run_sealed_confirmation.py", line 66, in selector
+    p,k=b.judge(s)
+  File "<repo>/jevset/backend.py", line 138, in judge
+    answer.update(self._request(sample, dict(parts[i:i+200])))
+  File "<repo>/jevset/live.py", line 84, in _request
+    answers = super()._request(sample, questions)
+  File "<repo>/jevset/backend.py", line 106, in _request
+    raise RuntimeError(f'TypeSafe HTTP {exc.code}: {detail.replace(self.api_key, "[REDACTED]")}') from exc
+RuntimeError: TypeSafe HTTP 402: {"detail":{"error_type":"billing_error","message":"Your organization has no available TypeSafe API credits. Please add more credits and/or set up auto-reload at https://console.typesafe.ai/settings/billing"}}
+workflow 48 / 96 new HTTP 1
+workflow 56 / 96 new HTTP 11
+workflow 64 / 96 new HTTP 20
+workflow 72 / 96 new HTTP 29
+workflow 80 / 96 new HTTP 37
+workflow 88 / 96 new HTTP 46
+workflow 96 / 96 new HTTP 54
+metatool 8 / 96 new HTTP 16
+metatool 16 / 96 new HTTP 32
+metatool 24 / 96 new HTTP 48
+metatool 32 / 96 new HTTP 64
+metatool 40 / 96 new HTTP 80
+metatool 48 / 96 new HTTP 96
+metatool 56 / 96 new HTTP 15
+metatool 64 / 96 new HTTP 31
+metatool 72 / 96 new HTTP 47
+metatool 80 / 96 new HTTP 63
+metatool 88 / 96 new HTTP 79
+metatool 96 / 96 new HTTP 95

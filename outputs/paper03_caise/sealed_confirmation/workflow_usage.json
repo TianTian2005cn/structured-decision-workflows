@@ -1,0 +1,8 @@
+{
+  "http_attempts": 117,
+  "input_tokens": 441036,
+  "output_tokens": 51594,
+  "resolved_models": [
+    "jev-1.14.0"
+  ]
+}

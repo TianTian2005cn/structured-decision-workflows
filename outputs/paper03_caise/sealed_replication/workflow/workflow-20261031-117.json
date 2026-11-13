@@ -1,0 +1,194 @@
+{
+  "id": "workflow-20261031-117",
+  "family": "9a404e1ad895f657f46a8bfb91914f78a4fc40ca25d924b869f10c8c94f89d1e",
+  "difficulty": "tight_budget",
+  "budget": 7.0,
+  "primary_fails": false,
+  "selections": {
+    "topk": [
+      "convert_usd",
+      "filter_period",
+      "filter_region",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ],
+    "route": [
+      "convert_usd",
+      "filter_period",
+      "filter_region",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ],
+    "route_constraints_off": [
+      "convert_usd",
+      "filter_period",
+      "filter_region",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": [\"2026-07\", \"2026-08\"], \"region\": \"East\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 602.5815749999999}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 602.5815749999999
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "topk_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": [\"2026-07\", \"2026-08\"], \"region\": \"East\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 602.5815749999999}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 602.5815749999999
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": [\"2026-07\", \"2026-08\"], \"region\": \"East\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 602.5815749999999}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 602.5815749999999
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": [\"2026-07\", \"2026-08\"], \"region\": \"East\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 602.5815749999999}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 602.5815749999999
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": [\"2026-07\", \"2026-08\"], \"region\": \"East\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 602.5815749999999}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 602.5815749999999
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": [\"2026-07\", \"2026-08\"], \"region\": \"East\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 602.5815749999999}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 602.5815749999999
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    }
+  }
+}

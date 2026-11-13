@@ -1,0 +1,221 @@
+{
+ "n_completed": 96,
+ "n_planned": 96,
+ "methods": {
+  "topk_static": {
+   "success": 63,
+   "rate": 0.65625,
+   "wilson95": [
+    0.5568784424044507,
+    0.7435975115065444
+   ],
+   "mean_tool_cost": 4.583333333333333,
+   "replans": 0
+  },
+  "topk_recovery": {
+   "success": 78,
+   "rate": 0.8125,
+   "wilson95": [
+    0.7229756303456031,
+    0.877976277476387
+   ],
+   "mean_tool_cost": 5.708333333333333,
+   "replans": 16
+  },
+  "route_static": {
+   "success": 76,
+   "rate": 0.7916666666666666,
+   "wilson95": [
+    0.699995683874769,
+    0.860892763425755
+   ],
+   "mean_tool_cost": 4.927083333333333,
+   "replans": 0
+  },
+  "route_recovery": {
+   "success": 94,
+   "rate": 0.9791666666666666,
+   "wilson95": [
+    0.9271914417038554,
+    0.9942681502898627
+   ],
+   "mean_tool_cost": 6.302083333333333,
+   "replans": 18
+  },
+  "route_constraints_off_static": {
+   "success": 71,
+   "rate": 0.7395833333333334,
+   "wilson95": [
+    0.6437875744340357,
+    0.8169422215628234
+   ],
+   "mean_tool_cost": 4.635416666666667,
+   "replans": 0
+  },
+  "route_constraints_off_recovery": {
+   "success": 89,
+   "rate": 0.9270833333333334,
+   "wilson95": [
+    0.8570680669280426,
+    0.9642328737620105
+   ],
+   "mean_tool_cost": 6.010416666666667,
+   "replans": 18
+  },
+  "llm_static": {
+   "success": 17,
+   "rate": 0.17708333333333334,
+   "wilson95": [
+    0.11360414067940665,
+    0.26541222123787034
+   ],
+   "mean_tool_cost": 2.375,
+   "replans": 0
+  },
+  "llm_recovery": {
+   "success": 17,
+   "rate": 0.17708333333333334,
+   "wilson95": [
+    0.11360414067940665,
+    0.26541222123787034
+   ],
+   "mean_tool_cost": 2.375,
+   "replans": 0
+  },
+  "llm_repair_recovery": {
+   "success": 26,
+   "rate": 0.2708333333333333,
+   "wilson95": [
+    0.192036585940851,
+    0.367265348323023
+   ],
+   "mean_tool_cost": 4.302083333333333,
+   "replans": 5
+  }
+ },
+ "by_difficulty": {
+  "tight_budget": {
+   "topk_static": 23,
+   "topk_recovery": 23,
+   "route_static": 29,
+   "route_recovery": 29,
+   "route_constraints_off_static": 24,
+   "route_constraints_off_recovery": 24,
+   "llm_static": 0,
+   "llm_recovery": 0,
+   "llm_repair_recovery": 5,
+   "n": 29
+  },
+  "distractors": {
+   "topk_static": 40,
+   "topk_recovery": 40,
+   "route_static": 47,
+   "route_recovery": 47,
+   "route_constraints_off_static": 47,
+   "route_constraints_off_recovery": 47,
+   "llm_static": 10,
+   "llm_recovery": 10,
+   "llm_repair_recovery": 14,
+   "n": 48
+  },
+  "read_failure": {
+   "topk_static": 0,
+   "topk_recovery": 15,
+   "route_static": 0,
+   "route_recovery": 18,
+   "route_constraints_off_static": 0,
+   "route_constraints_off_recovery": 18,
+   "llm_static": 7,
+   "llm_recovery": 7,
+   "llm_repair_recovery": 7,
+   "n": 19
+  }
+ },
+ "confirmatory_tests": [
+  {
+   "hypothesis": "H1_primary",
+   "a": "route_recovery",
+   "b": "topk_static",
+   "a_only": 31,
+   "b_only": 0,
+   "diff_pp": 32.291666666666664,
+   "p_one_sided": 4.656612873077393e-10,
+   "p_holm": 1.862645149230957e-09,
+   "reject_at_.05": true
+  },
+  {
+   "hypothesis": "H2",
+   "a": "route_static",
+   "b": "topk_static",
+   "a_only": 13,
+   "b_only": 0,
+   "diff_pp": 13.541666666666666,
+   "p_one_sided": 0.0001220703125,
+   "p_holm": 0.000244140625,
+   "reject_at_.05": true
+  },
+  {
+   "hypothesis": "H3",
+   "a": "route_recovery",
+   "b": "route_static",
+   "a_only": 18,
+   "b_only": 0,
+   "diff_pp": 18.75,
+   "p_one_sided": 3.814697265625e-06,
+   "p_holm": 1.1444091796875e-05,
+   "reject_at_.05": true
+  },
+  {
+   "hypothesis": "H4",
+   "a": "route_static",
+   "b": "route_constraints_off_static",
+   "a_only": 5,
+   "b_only": 0,
+   "diff_pp": 5.208333333333333,
+   "p_one_sided": 0.03125,
+   "p_holm": 0.03125,
+   "reject_at_.05": true
+  }
+ ],
+ "interaction_pp": {
+  "estimate": 3.125,
+  "ci95": [
+   0.0,
+   7.291666666666667
+  ]
+ },
+ "sdm_vs_llm_secondary": [
+  {
+   "a": "route_recovery",
+   "b": "llm_repair_recovery",
+   "a_only": 68,
+   "b_only": 0,
+   "diff_pp": 70.83333333333333,
+   "p_two_sided_exact": 6.776263578034403e-21
+  },
+  {
+   "a": "route_recovery",
+   "b": "llm_recovery",
+   "a_only": 77,
+   "b_only": 0,
+   "diff_pp": 80.20833333333333,
+   "p_two_sided_exact": 1.3234889800848443e-23
+  },
+  {
+   "a": "route_static",
+   "b": "llm_static",
+   "a_only": 66,
+   "b_only": 7,
+   "diff_pp": 61.458333333333336,
+   "p_two_sided_exact": 3.845005957472025e-13
+  }
+ ],
+ "workflow_usage.json": {
+  "http_attempts": 117,
+  "input_tokens": 441036,
+  "output_tokens": 51594,
+  "resolved_models": [
+   "jev-1.14.0"
+  ]
+ }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "meta-0040",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "ProductComparison"
+    ],
+    "topk": [
+      "ProductComparison",
+      "ProductSearch"
+    ],
+    "v2_cover": [
+      "ChartTool",
+      "PDF&URLTool",
+      "ProductComparison",
+      "ProductSearch",
+      "Review"
+    ],
+    "v2_route": [
+      "ProductComparison",
+      "ProductSearch"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "ProductSearch"
+  ],
+  "requests": 2
+}

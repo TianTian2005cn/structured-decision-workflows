@@ -1,0 +1,25 @@
+{
+  "id": "workflow-20261031-241",
+  "difficulty": "distractors",
+  "request_text": "Report the median net (refund-adjusted) transaction value in USD for the East region over the whole ledger period, counting transactions of every status, delivered as a CSV report.",
+  "methods": {
+    "topk_static": {
+      "success": true,
+      "total_cost": 6.0
+    },
+    "topk_recovery": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 6.0
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false
+    }
+  }
+}

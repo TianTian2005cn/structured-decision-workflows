@@ -1,0 +1,23 @@
+{
+  "id": "meta-0335",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "HousePurchasingTool"
+    ],
+    "topk": [
+      "HousePurchasingTool"
+    ],
+    "v2_cover": [
+      "HousePurchasingTool"
+    ],
+    "v2_route": [
+      "HousePurchasingTool"
+    ]
+  },
+  "gold": [
+    "HousePurchasingTool",
+    "TripTool"
+  ],
+  "requests": 2
+}

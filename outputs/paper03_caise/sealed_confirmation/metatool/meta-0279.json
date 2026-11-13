@@ -1,0 +1,27 @@
+{
+  "id": "meta-0279",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "NewsTool",
+      "WeatherTool"
+    ],
+    "topk": [
+      "NewsTool",
+      "WeatherTool"
+    ],
+    "v2_cover": [
+      "NewsTool",
+      "WeatherTool"
+    ],
+    "v2_route": [
+      "NewsTool",
+      "WeatherTool"
+    ]
+  },
+  "gold": [
+    "NewsTool",
+    "WeatherTool"
+  ],
+  "requests": 2
+}

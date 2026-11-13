@@ -1,0 +1,194 @@
+{
+  "id": "workflow-20261031-154",
+  "family": "d161bb6a055f5070c503cbedabe2c91c33dcded6dd2070353ada6d33c4b63ca6",
+  "difficulty": "distractors",
+  "budget": 7.0,
+  "primary_fails": false,
+  "selections": {
+    "topk": [
+      "convert_usd",
+      "filter_region",
+      "filter_settled",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds",
+      "sum_values"
+    ],
+    "route": [
+      "convert_usd",
+      "filter_region",
+      "filter_settled",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds",
+      "sum_values"
+    ],
+    "route_constraints_off": [
+      "convert_usd",
+      "filter_region",
+      "filter_settled",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds",
+      "sum_values"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,,True,True,total,csv,USD,2319.2\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 2319.2
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "topk_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,,True,True,total,csv,USD,2319.2\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 2319.2
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,,True,True,total,csv,USD,2319.2\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 2319.2
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,,True,True,total,csv,USD,2319.2\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 2319.2
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,,True,True,total,csv,USD,2319.2\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 2319.2
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,,True,True,total,csv,USD,2319.2\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 2319.2
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    }
+  }
+}

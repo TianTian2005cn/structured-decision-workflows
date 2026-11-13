@@ -1,0 +1,5 @@
+# Core pipeline, environments and analyses: Python >= 3.10 standard library only.
+# Optional extras:
+matplotlib>=3.7        # figures
+numpy>=1.24            # open-weights baselines
+llama-cpp-python==0.3.16  # open-weights baselines (Qwen2.5-7B GGUF)

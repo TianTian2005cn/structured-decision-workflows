@@ -1,0 +1,59 @@
+{
+  "stage": "INDEPENDENT_REPLICATION_FRESH_CACHE",
+  "model": "jev-1.14.0",
+  "frozen_sources_must_match": "outputs/v2_live_development/protocol.json code_sha256",
+  "workflow": {
+    "data": "results_private/v2_sealed/workflow_sealed_test.json (96 reserved goal families, never evaluated before)",
+    "methods": [
+      "topk_static",
+      "route_static",
+      "topk_recovery",
+      "route_recovery",
+      "route_constraints_off_static",
+      "route_constraints_off_recovery"
+    ],
+    "policy": {
+      "min_count_probability": 0.65,
+      "min_boundary_margin": 0.15,
+      "uncertain_action": "constrained",
+      "width": 24,
+      "legacy_slots": 12,
+      "max_replans": 1
+    },
+    "primary_metric": "numeric goal success (independent oracle)",
+    "hypotheses": {
+      "H1_primary": "route_recovery > topk_static",
+      "H2": "route_static > topk_static",
+      "H3": "route_recovery > route_static",
+      "H4": "route_static > route_constraints_off_static (matched decoder-constraint effect)"
+    },
+    "test": "exact one-sided McNemar (binomial on discordant pairs), Holm correction over H1-H4 at alpha=.05",
+    "secondary": "interaction s11-s10-s01+s00, bootstrap 95% CI (10k, seed 2027); tool cost units; Jev requests/tokens",
+    "development_reference": "32 V2 dev families: 71.9/84.4/78.1/100.0 percent; 400 V3 scale rows: 39.5/72.5/41.2/84.0 percent"
+  },
+  "metatool": {
+    "data": "results_private/v2_sealed/tools.jsonl (96 reserved MetaTool items, 47-tool catalog)",
+    "methods": [
+      "threshold",
+      "topk",
+      "v2_cover",
+      "v2_route"
+    ],
+    "frozen_params": "outputs/v2_live_development/tools_frozen.json (threshold .8, legacy_slots 16, policy 0/0)",
+    "order": "permute(sample,0), identical to development",
+    "prediction": "no public hard constraints => routing collapses to Top-K (equivalence, descriptive); Exact Match reported with Wilson CI"
+  },
+  "no_peeking": "Gold labels are read only by the evaluator after selections are stored per item. Results are final regardless of outcome.",
+  "frozen_sha": [
+    "51c78c6ff56a7a047ebd1c3567e5c54b1e23064d31196f544b244b29730c2bbb",
+    "2599407963651f575b2ff0e9d7b65822523665b7d2ebeeda87e3e7185db5e21b",
+    "18448236017bff070ed03a04248975501583e55d20f6b84f960514031c4496e0",
+    "b6e4336d5db4e5ad1e25debc687533ab514b525a9dac7792d9f6efdc4f536be1"
+  ],
+  "sealed_sha256": {
+    "workflow_sealed_test.json": "b89aacffc3db8e403d767ee08080a5c8430b20d3d34525d233383c92b0f92555",
+    "tools.jsonl": "4e0c6f39a64bf78b81775a18453c5dee8f98f441b5df0c283b9fe55a88e69652"
+  },
+  "runner_sha256": "d43556aa5007dfabd97d822046c1d904fcbec419db566754e77215cfa4c2b09a",
+  "created_utc": "2026-11-07T01:46:34.941032+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "meta-0061",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "NewsTool",
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "topk": [
+      "NewsTool",
+      "TripAdviceTool"
+    ],
+    "v2_cover": [
+      "NewsTool",
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "v2_route": [
+      "NewsTool",
+      "TripAdviceTool"
+    ]
+  },
+  "gold": [
+    "NewsTool",
+    "TripTool"
+  ],
+  "requests": 2
+}

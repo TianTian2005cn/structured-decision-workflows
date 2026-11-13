@@ -1,0 +1,28 @@
+{
+  "id": "meta-0255",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "MusicTool",
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "topk": [
+      "MusicTool",
+      "TripAdviceTool"
+    ],
+    "v2_cover": [
+      "MusicTool",
+      "TripAdviceTool"
+    ],
+    "v2_route": [
+      "MusicTool",
+      "TripAdviceTool"
+    ]
+  },
+  "gold": [
+    "MusicTool",
+    "TripAdviceTool"
+  ],
+  "requests": 2
+}

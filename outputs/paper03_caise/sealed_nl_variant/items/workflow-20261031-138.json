@@ -1,0 +1,25 @@
+{
+  "id": "workflow-20261031-138",
+  "difficulty": "tight_budget",
+  "request_text": "Report the total gross (before refunds) transaction value in USD for the West region over the whole ledger period, counting settled transactions only, delivered as a CSV report.",
+  "methods": {
+    "topk_static": {
+      "success": true,
+      "total_cost": 5.0
+    },
+    "topk_recovery": {
+      "success": true,
+      "total_cost": 5.0,
+      "replanned": false
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 5.0
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 5.0,
+      "replanned": false
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "workflow-20261031-116",
+  "difficulty": "distractors",
+  "request_text": "Calculate the median net (refund-adjusted) transaction value in USD across all regions for the months 2026-07 through 2026-08, counting transactions of every status, delivered as a JSON report.",
+  "methods": {
+    "topk_static": {
+      "success": true,
+      "total_cost": 6.0
+    },
+    "topk_recovery": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 6.0
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false
+    }
+  }
+}

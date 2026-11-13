@@ -1,0 +1,27 @@
+{
+  "id": "meta-0373",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "JobTool",
+      "TripAdviceTool"
+    ],
+    "topk": [
+      "JobTool",
+      "TripAdviceTool"
+    ],
+    "v2_cover": [
+      "JobTool",
+      "TripAdviceTool"
+    ],
+    "v2_route": [
+      "JobTool",
+      "TripAdviceTool"
+    ]
+  },
+  "gold": [
+    "JobTool",
+    "TripAdviceTool"
+  ],
+  "requests": 2
+}

@@ -1,0 +1,26 @@
+{
+  "id": "meta-0108",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "CourseTool"
+    ],
+    "topk": [
+      "CourseTool",
+      "PDF&URLTool"
+    ],
+    "v2_cover": [
+      "CourseTool",
+      "PDF&URLTool"
+    ],
+    "v2_route": [
+      "CourseTool",
+      "PDF&URLTool"
+    ]
+  },
+  "gold": [
+    "CourseTool",
+    "PDF&URLTool"
+  ],
+  "requests": 2
+}

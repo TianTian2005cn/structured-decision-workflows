@@ -1,0 +1,28 @@
+{
+  "id": "meta-0408",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "ResearchFinder",
+      "TripAdviceTool"
+    ],
+    "topk": [
+      "ResearchFinder",
+      "TripAdviceTool"
+    ],
+    "v2_cover": [
+      "ResearchFinder",
+      "ResearchHelper",
+      "TripAdviceTool"
+    ],
+    "v2_route": [
+      "ResearchFinder",
+      "TripAdviceTool"
+    ]
+  },
+  "gold": [
+    "ResearchFinder",
+    "TripTool"
+  ],
+  "requests": 2
+}

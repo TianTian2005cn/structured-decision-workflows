@@ -1,0 +1,77 @@
+{
+  "id": "order-20261107-038",
+  "difficulty": "distractors",
+  "gold": [
+    "apply_coupon",
+    "check_stock",
+    "compute_total",
+    "invoice_edi",
+    "load_order",
+    "ship_freight",
+    "tax_export_exempt"
+  ],
+  "selections": {
+    "topk": [
+      "apply_coupon",
+      "check_stock",
+      "compute_total",
+      "invoice_edi",
+      "load_order",
+      "ship_freight",
+      "tax_export_exempt"
+    ],
+    "route": [
+      "apply_coupon",
+      "check_stock",
+      "compute_total",
+      "invoice_edi",
+      "load_order",
+      "ship_freight",
+      "tax_export_exempt"
+    ],
+    "route_constraints_off": [
+      "apply_coupon",
+      "check_stock",
+      "compute_total",
+      "invoice_edi",
+      "load_order",
+      "ship_freight",
+      "tax_export_exempt"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "valid": true,
+      "error": null
+    },
+    "topk_recovery": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "valid": true,
+      "error": null
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false
+    },
+    "route_constraints_off_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "valid": true,
+      "error": null
+    },
+    "route_constraints_off_recovery": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "meta-0104",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "CourseTool",
+      "NewsTool"
+    ],
+    "topk": [
+      "CourseTool",
+      "NewsTool"
+    ],
+    "v2_cover": [
+      "CourseTool",
+      "NewsTool"
+    ],
+    "v2_route": [
+      "CourseTool",
+      "NewsTool"
+    ]
+  },
+  "gold": [
+    "CourseTool",
+    "NewsTool"
+  ],
+  "requests": 2
+}

@@ -1,0 +1,16 @@
+{
+ "stage": "POST_CONFIRMATION_FRONTIER_REFERENCE",
+ "script_sha256": "aecfdc6d0a4056d278b29c988207b2e599e12f85d7b39e679ed2fffecdd8ce95",
+ "models": [
+  "deepseek-flash",
+  "deepseek-v4-pro"
+ ],
+ "temperature": 0,
+ "thinking": "disabled",
+ "created_utc": "2026-11-07T10:03:24.279330",
+ "note": "Script and prompts fixed before the first call; first run = e1 deepseek-flash ledger.",
+ "amendment_1": {
+  "what": "Token-variant parsing bug in e2 (stripped \" Yes\" with logprob -9999 overwrote \"Yes\"); all e2 probabilities were 0.5. Fixed to keep the maximum per stripped token; e2 results recomputed from the same cached responses. No prompt, model or decoder change.",
+  "new_script_sha256": "a2381f47d19ab680079a208d5133871666e0ad06b31739f1580e71c53680a86d"
+ }
+}

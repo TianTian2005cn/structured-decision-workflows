@@ -1,0 +1,13 @@
+protocol frozen
+workflow 8 / 96 new HTTP 10
+workflow 16 / 96 new HTTP 21
+workflow 24 / 96 new HTTP 32
+workflow 32 / 96 new HTTP 44
+workflow 40 / 96 new HTTP 52
+workflow 48 / 96 new HTTP 62
+workflow 56 / 96 new HTTP 72
+workflow 64 / 96 new HTTP 81
+workflow 72 / 96 new HTTP 90
+workflow 80 / 96 new HTTP 98
+workflow 88 / 96 new HTTP 107
+workflow 96 / 96 new HTTP 115

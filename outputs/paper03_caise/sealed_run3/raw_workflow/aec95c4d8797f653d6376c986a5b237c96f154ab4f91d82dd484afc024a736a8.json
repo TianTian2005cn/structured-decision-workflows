@@ -1,0 +1,407 @@
+{
+  "utc": "2026-11-07T05:42:28.491887+00:00",
+  "sample_id": "workflow-20261031-113",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "request_sha256": "aec95c4d8797f653d6376c986a5b237c96f154ab4f91d82dd484afc024a736a8",
+  "request": {
+    "model": "jev-1.14.0",
+    "state": {
+      "task": "tools",
+      "input": "Create exactly the requested machine-readable numeric report. Do not round individual rows or send external messages. Empty input has value 0 for total and null for other statistics. Use backup only when necessary. All tools operate at most once.\nRequest: {\"region\": \"East\", \"period\": null, \"settled_only\": false, \"net\": true, \"statistic\": \"median\", \"format\": \"json\", \"currency\": \"USD\"}\nOffline FX rates to USD: {\"USD\": 1.0, \"EUR\": 1.137, \"JPY\": 0.00673}\nLedger: [{\"region\": \"East\", \"month\": \"2026-06\", \"status\": \"settled\", \"currency\": \"EUR\", \"gross\": 220.56, \"refund\": 20.65}, {\"region\": \"West\", \"month\": \"2026-07\", \"status\": \"settled\", \"currency\": \"USD\", \"gross\": 350.02, \"refund\": 28.5}, {\"region\": \"North\", \"month\": \"2026-08\", \"status\": \"pending\", \"currency\": \"JPY\", \"gross\": 348.44, \"refund\": 8.07}, {\"region\": \"East\", \"month\": \"2026-09\", \"status\": \"cancelled\", \"currency\": \"EUR\", \"gross\": 790.77, \"refund\": 12.78}, {\"region\": \"West\", \"month\": \"2026-06\", \"status\": \"settled\", \"currency\": \"USD\", \"gross\": 805.18, \"refund\": 5.1}, {\"region\": \"North\", \"month\": \"2026-07\", \"status\": \"settled\", \"currency\": \"JPY\", \"gross\": 756.68, \"refund\": 24.69}, {\"region\": \"East\", \"month\": \"2026-08\", \"status\": \"pending\", \"currency\": \"EUR\", \"gross\": 892.75, \"refund\": 6.93}, {\"region\": \"West\", \"month\": \"2026-09\", \"status\": \"cancelled\", \"currency\": \"USD\", \"gross\": 725.52, \"refund\": 13.72}, {\"region\": \"North\", \"month\": \"2026-06\", \"status\": \"settled\", \"currency\": \"JPY\", \"gross\": 784.18, \"refund\": 28.84}, {\"region\": \"East\", \"month\": \"2026-07\", \"status\": \"settled\", \"currency\": \"EUR\", \"gross\": 301.87, \"refund\": 11.67}, {\"region\": \"West\", \"month\": \"2026-08\", \"status\": \"pending\", \"currency\": \"USD\", \"gross\": 159.17, \"refund\": 12.37}, {\"region\": \"North\", \"month\": \"2026-09\", \"status\": \"cancelled\", \"currency\": \"JPY\", \"gross\": 801.73, \"refund\": 27.73}, {\"region\": \"East\", \"month\": \"2026-06\", \"status\": \"settled\", \"currency\": \"EUR\", \"gross\": 416.42, \"refund\": 22.49}, {\"region\": \"West\", \"month\": \"2026-07\", \"status\": \"settled\", \"currency\": \"USD\", \"gross\": 274.45, \"refund\": 4.28}, {\"region\": \"North\", \"month\": \"2026-08\", \"status\": \"pending\", \"currency\": \"JPY\", \"gross\": 378.52, \"refund\": 11.5}, {\"region\": \"East\", \"month\": \"2026-09\", \"status\": \"cancelled\", \"currency\": \"EUR\", \"gross\": 205.99, \"refund\": 7.47}, {\"region\": \"West\", \"month\": \"2026-06\", \"status\": \"settled\", \"currency\": \"USD\", \"gross\": 432.39, \"refund\": 7.09}, {\"region\": \"North\", \"month\": \"2026-07\", \"status\": \"settled\", \"currency\": \"JPY\", \"gross\": 188.19, \"refund\": 24.86}, {\"region\": \"East\", \"month\": \"2026-08\", \"status\": \"pending\", \"currency\": \"EUR\", \"gross\": 703.07, \"refund\": 6.13}, {\"region\": \"West\", \"month\": \"2026-09\", \"status\": \"cancelled\", \"currency\": \"USD\", \"gross\": 377.33, \"refund\": 28.89}, {\"region\": \"North\", \"month\": \"2026-06\", \"status\": \"settled\", \"currency\": \"JPY\", \"gross\": 471.7, \"refund\": 23.24}, {\"region\": \"East\", \"month\": \"2026-07\", \"status\": \"settled\", \"currency\": \"EUR\", \"gross\": 517.92, \"refund\": 22.11}, {\"region\": \"West\", \"month\": \"2026-08\", \"status\": \"pending\", \"currency\": \"USD\", \"gross\": 170.38, \"refund\": 0.98}, {\"region\": \"North\", \"month\": \"2026-09\", \"status\": \"cancelled\", \"currency\": \"JPY\", \"gross\": 308.17, \"refund\": 10.27}]\nRuntime observation: primary read failed before any records were loaded. Primary is unavailable. Remaining budget: 7.0",
+      "options": [
+        {
+          "id": "read_backup",
+          "meaning": "Read an identical offline backup ledger; costs two units, useful if primary is unavailable."
+        },
+        {
+          "id": "filter_region",
+          "meaning": "Keep only the requested region, if the request specifies a region."
+        },
+        {
+          "id": "filter_period",
+          "meaning": "Keep only transactions in the requested month range, if specified."
+        },
+        {
+          "id": "filter_settled",
+          "meaning": "Keep only settled transactions; exclude pending and cancelled transactions."
+        },
+        {
+          "id": "subtract_refunds",
+          "meaning": "Convert gross revenue to net revenue by subtracting each transaction refund in its original currency."
+        },
+        {
+          "id": "convert_usd",
+          "meaning": "Convert each current transaction value to USD using supplied offline FX rates."
+        },
+        {
+          "id": "sum_values",
+          "meaning": "Calculate total of current transaction values."
+        },
+        {
+          "id": "mean_values",
+          "meaning": "Calculate arithmetic mean of current transaction values."
+        },
+        {
+          "id": "max_values",
+          "meaning": "Calculate the largest individual current transaction value."
+        },
+        {
+          "id": "median_values",
+          "meaning": "Calculate median current transaction value."
+        },
+        {
+          "id": "report_json",
+          "meaning": "Write the computed result and requested metadata as an in-memory JSON report."
+        },
+        {
+          "id": "report_csv",
+          "meaning": "Write the computed result and requested metadata as an in-memory CSV report."
+        },
+        {
+          "id": "round_rows",
+          "meaning": "Round every individual transaction to the nearest dollar before aggregation. Can introduce rounding error."
+        },
+        {
+          "id": "plot_preview",
+          "meaning": "Create a chart preview. Does not produce the requested machine-readable numeric report."
+        },
+        {
+          "id": "send_external_email",
+          "meaning": "Send a report externally. Unavailable in this local benchmark; no external action is permitted."
+        }
+      ],
+      "requires_any": {
+        "filter_region": [
+          "read_backup"
+        ],
+        "filter_period": [
+          "read_backup"
+        ],
+        "filter_settled": [
+          "read_backup"
+        ],
+        "subtract_refunds": [
+          "read_backup"
+        ],
+        "convert_usd": [
+          "read_backup"
+        ],
+        "round_rows": [
+          "read_backup"
+        ],
+        "sum_values": [
+          "read_backup"
+        ],
+        "mean_values": [
+          "read_backup"
+        ],
+        "max_values": [
+          "read_backup"
+        ],
+        "median_values": [
+          "read_backup"
+        ],
+        "report_json": [
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ],
+        "report_csv": [
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ],
+        "plot_preview": [
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ],
+        "send_external_email": [
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ]
+      },
+      "precedes_if_both_selected": {
+        "filter_region": [
+          "subtract_refunds",
+          "convert_usd",
+          "round_rows",
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ],
+        "filter_period": [
+          "subtract_refunds",
+          "convert_usd",
+          "round_rows",
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ],
+        "filter_settled": [
+          "subtract_refunds",
+          "convert_usd",
+          "round_rows",
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ],
+        "subtract_refunds": [
+          "convert_usd",
+          "round_rows",
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ],
+        "convert_usd": [
+          "round_rows",
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ],
+        "round_rows": [
+          "sum_values",
+          "mean_values",
+          "max_values",
+          "median_values"
+        ]
+      },
+      "excludes": [
+        [
+          "report_json",
+          "report_csv"
+        ],
+        [
+          "sum_values",
+          "mean_values"
+        ],
+        [
+          "sum_values",
+          "max_values"
+        ],
+        [
+          "sum_values",
+          "median_values"
+        ],
+        [
+          "mean_values",
+          "max_values"
+        ],
+        [
+          "mean_values",
+          "median_values"
+        ],
+        [
+          "max_values",
+          "median_values"
+        ]
+      ],
+      "costs": {
+        "read_backup": 2.0,
+        "filter_region": 1.0,
+        "filter_period": 1.0,
+        "filter_settled": 1.0,
+        "subtract_refunds": 1.0,
+        "convert_usd": 1.0,
+        "sum_values": 1.0,
+        "mean_values": 1.0,
+        "max_values": 1.0,
+        "median_values": 1.0,
+        "report_json": 1.0,
+        "report_csv": 1.0,
+        "round_rows": 1.0,
+        "plot_preview": 1.0,
+        "send_external_email": 20.0
+      },
+      "budget": 7.0
+    },
+    "questions": {
+      "label_0": {
+        "type": "noul",
+        "instructions": "Is option read_backup (Read an identical offline backup ledger; costs two units, useful if primary is unavailable.) a correct / relevant member of the required answer set?"
+      },
+      "label_1": {
+        "type": "noul",
+        "instructions": "Is option filter_region (Keep only the requested region, if the request specifies a region.) a correct / relevant member of the required answer set?"
+      },
+      "label_2": {
+        "type": "noul",
+        "instructions": "Is option filter_period (Keep only transactions in the requested month range, if specified.) a correct / relevant member of the required answer set?"
+      },
+      "label_3": {
+        "type": "noul",
+        "instructions": "Is option filter_settled (Keep only settled transactions; exclude pending and cancelled transactions.) a correct / relevant member of the required answer set?"
+      },
+      "label_4": {
+        "type": "noul",
+        "instructions": "Is option subtract_refunds (Convert gross revenue to net revenue by subtracting each transaction refund in its original currency.) a correct / relevant member of the required answer set?"
+      },
+      "label_5": {
+        "type": "noul",
+        "instructions": "Is option convert_usd (Convert each current transaction value to USD using supplied offline FX rates.) a correct / relevant member of the required answer set?"
+      },
+      "label_6": {
+        "type": "noul",
+        "instructions": "Is option sum_values (Calculate total of current transaction values.) a correct / relevant member of the required answer set?"
+      },
+      "label_7": {
+        "type": "noul",
+        "instructions": "Is option mean_values (Calculate arithmetic mean of current transaction values.) a correct / relevant member of the required answer set?"
+      },
+      "label_8": {
+        "type": "noul",
+        "instructions": "Is option max_values (Calculate the largest individual current transaction value.) a correct / relevant member of the required answer set?"
+      },
+      "label_9": {
+        "type": "noul",
+        "instructions": "Is option median_values (Calculate median current transaction value.) a correct / relevant member of the required answer set?"
+      },
+      "label_10": {
+        "type": "noul",
+        "instructions": "Is option report_json (Write the computed result and requested metadata as an in-memory JSON report.) a correct / relevant member of the required answer set?"
+      },
+      "label_11": {
+        "type": "noul",
+        "instructions": "Is option report_csv (Write the computed result and requested metadata as an in-memory CSV report.) a correct / relevant member of the required answer set?"
+      },
+      "label_12": {
+        "type": "noul",
+        "instructions": "Is option round_rows (Round every individual transaction to the nearest dollar before aggregation. Can introduce rounding error.) a correct / relevant member of the required answer set?"
+      },
+      "label_13": {
+        "type": "noul",
+        "instructions": "Is option plot_preview (Create a chart preview. Does not produce the requested machine-readable numeric report.) a correct / relevant member of the required answer set?"
+      },
+      "label_14": {
+        "type": "noul",
+        "instructions": "Is option send_external_email (Send a report externally. Unavailable in this local benchmark; no external action is permitted.) a correct / relevant member of the required answer set?"
+      },
+      "cardinality": {
+        "type": "choice",
+        "instructions": "How many distinct options exactly should be selected in total? Select one count.",
+        "criteria": {
+          "k0": "Exactly 0 options are required",
+          "k1": "Exactly 1 options are required",
+          "k2": "Exactly 2 options are required",
+          "k3": "Exactly 3 options are required",
+          "k4": "Exactly 4 options are required",
+          "k5": "Exactly 5 options are required",
+          "k6": "Exactly 6 options are required",
+          "k7": "Exactly 7 options are required",
+          "k8": "Exactly 8 options are required",
+          "k9": "Exactly 9 options are required",
+          "k10": "Exactly 10 options are required",
+          "k11": "Exactly 11 options are required",
+          "k12": "Exactly 12 options are required",
+          "k13": "Exactly 13 options are required",
+          "k14": "Exactly 14 options are required",
+          "k15": "Exactly 15 options are required"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+      "label_0": {
+        "type": "noul",
+        "noul": 1.0
+      },
+      "label_1": {
+        "type": "noul",
+        "noul": 0.98
+      },
+      "label_2": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "label_3": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "label_4": {
+        "type": "noul",
+        "noul": 0.98
+      },
+      "label_5": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "label_6": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "label_7": {
+        "type": "noul",
+        "noul": 0.0
+      },
+      "label_8": {
+        "type": "noul",
+        "noul": 0.0
+      },
+      "label_9": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "label_10": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "label_11": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "label_12": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "label_13": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "label_14": {
+        "type": "noul",
+        "noul": 0.0
+      },
+      "cardinality": {
+        "type": "choice",
+        "choice": "k6",
+        "confidence": 0.53,
+        "probabilities": {
+          "k0": 0.0,
+          "k1": 0.0,
+          "k2": 0.0,
+          "k3": 0.0,
+          "k4": 0.0,
+          "k5": 0.05,
+          "k6": 0.56,
+          "k7": 0.36,
+          "k8": 0.03,
+          "k9": 0.0,
+          "k10": 0.0,
+          "k11": 0.0,
+          "k12": 0.0,
+          "k13": 0.0,
+          "k14": 0.0,
+          "k15": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 3742,
+      "output_tokens": 429
+    }
+  },
+  "http_attempts": 1,
+  "elapsed_seconds": 2.1439036110023153
+}

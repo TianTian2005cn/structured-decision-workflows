@@ -1,0 +1,194 @@
+{
+  "id": "workflow-20261031-214",
+  "family": "0e052d1ebf915fb9d948f35e409525628635ca8ad0a4155c6fb07258b221f6b4",
+  "difficulty": "distractors",
+  "budget": 7.0,
+  "primary_fails": false,
+  "selections": {
+    "topk": [
+      "convert_usd",
+      "filter_period",
+      "filter_region",
+      "max_values",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds"
+    ],
+    "route": [
+      "convert_usd",
+      "filter_period",
+      "filter_region",
+      "max_values",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds"
+    ],
+    "route_constraints_off": [
+      "convert_usd",
+      "filter_period",
+      "filter_region",
+      "max_values",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "max_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,\"['2026-07', '2026-08']\",False,True,largest,csv,USD,707.9599999999999\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 707.9599999999999
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "topk_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "max_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,\"['2026-07', '2026-08']\",False,True,largest,csv,USD,707.9599999999999\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 707.9599999999999
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "max_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,\"['2026-07', '2026-08']\",False,True,largest,csv,USD,707.9599999999999\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 707.9599999999999
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "max_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,\"['2026-07', '2026-08']\",False,True,largest,csv,USD,707.9599999999999\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 707.9599999999999
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "max_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,\"['2026-07', '2026-08']\",False,True,largest,csv,USD,707.9599999999999\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 707.9599999999999
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "max_values",
+            "report_csv"
+          ],
+          "cost": 7.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nWest,\"['2026-07', '2026-08']\",False,True,largest,csv,USD,707.9599999999999\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 707.9599999999999
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    }
+  }
+}

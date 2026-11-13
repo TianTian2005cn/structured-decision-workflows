@@ -1,0 +1,27 @@
+{
+  "id": "meta-0126",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "CourseTool",
+      "HousePurchasingTool"
+    ],
+    "topk": [
+      "CourseTool",
+      "HousePurchasingTool"
+    ],
+    "v2_cover": [
+      "CourseTool",
+      "HousePurchasingTool"
+    ],
+    "v2_route": [
+      "CourseTool",
+      "HousePurchasingTool"
+    ]
+  },
+  "gold": [
+    "CourseTool",
+    "HousePurchasingTool"
+  ],
+  "requests": 2
+}

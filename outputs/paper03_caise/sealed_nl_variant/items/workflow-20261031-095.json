@@ -1,0 +1,25 @@
+{
+  "id": "workflow-20261031-095",
+  "difficulty": "read_failure",
+  "request_text": "Report the largest single net (refund-adjusted) transaction value in USD for the North region for the months 2026-07 through 2026-08, counting settled transactions only, delivered as a JSON report.",
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 1.0
+    },
+    "topk_recovery": {
+      "success": true,
+      "total_cost": 10.0,
+      "replanned": true
+    },
+    "route_static": {
+      "success": false,
+      "total_cost": 1.0
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 10.0,
+      "replanned": true
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "id": "workflow-20261031-126",
+  "family": "c1c3d35decaa59de51a60f10e3fc4fb62e2d9209220a259758e09896a3c903a3",
+  "difficulty": "tight_budget",
+  "budget": 7.0,
+  "primary_fails": false,
+  "selections": {
+    "topk": [
+      "convert_usd",
+      "filter_period",
+      "filter_region",
+      "filter_settled",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ],
+    "route": [
+      "filter_period",
+      "filter_region",
+      "filter_settled",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ],
+    "route_constraints_off": [
+      "convert_usd",
+      "filter_period",
+      "filter_region",
+      "filter_settled",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": false,
+          "valid": false,
+          "executed": [],
+          "cost": 0.0,
+          "artifact": null,
+          "error": "infeasible set or no legal execution order",
+          "failed_tool": null
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "topk_recovery": {
+      "attempts": [
+        {
+          "success": false,
+          "valid": false,
+          "executed": [],
+          "cost": 0.0,
+          "artifact": null,
+          "error": "infeasible set or no legal execution order",
+          "failed_tool": null
+        }
+      ],
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": [\"2026-07\", \"2026-08\"], \"region\": \"West\", \"settled_only\": true, \"statistic\": \"median\", \"value\": 470.22}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 470.22
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_period",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": [\"2026-07\", \"2026-08\"], \"region\": \"West\", \"settled_only\": true, \"statistic\": \"median\", \"value\": 470.22}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 470.22
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_static": {
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": false,
+          "valid": false,
+          "executed": [],
+          "cost": 0.0,
+          "artifact": null,
+          "error": "infeasible set or no legal execution order",
+          "failed_tool": null
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_recovery": {
+      "attempts": [
+        {
+          "success": false,
+          "valid": false,
+          "executed": [],
+          "cost": 0.0,
+          "artifact": null,
+          "error": "infeasible set or no legal execution order",
+          "failed_tool": null
+        }
+      ],
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "meta-0419",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "RepoTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "topk": [
+      "RepoTool",
+      "ResearchFinder"
+    ],
+    "v2_cover": [
+      "RepoTool",
+      "ResearchFinder"
+    ],
+    "v2_route": [
+      "RepoTool",
+      "ResearchFinder"
+    ]
+  },
+  "gold": [
+    "RepoTool",
+    "ResearchFinder"
+  ],
+  "requests": 2
+}

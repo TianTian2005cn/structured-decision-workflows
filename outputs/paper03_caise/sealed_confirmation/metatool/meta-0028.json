@@ -1,0 +1,28 @@
+{
+  "id": "meta-0028",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "FinanceTool",
+      "HousePurchasingTool"
+    ],
+    "topk": [
+      "FinanceTool",
+      "HousePurchasingTool"
+    ],
+    "v2_cover": [
+      "FinanceTool",
+      "HousePurchasingTool",
+      "NewsTool"
+    ],
+    "v2_route": [
+      "FinanceTool",
+      "HousePurchasingTool"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "HousePurchasingTool"
+  ],
+  "requests": 2
+}

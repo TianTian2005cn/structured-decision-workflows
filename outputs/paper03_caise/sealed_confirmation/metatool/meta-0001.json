@@ -1,0 +1,27 @@
+{
+  "id": "meta-0001",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "FinanceTool",
+      "NewsTool"
+    ],
+    "topk": [
+      "FinanceTool",
+      "NewsTool"
+    ],
+    "v2_cover": [
+      "FinanceTool",
+      "NewsTool"
+    ],
+    "v2_route": [
+      "FinanceTool",
+      "NewsTool"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "NewsTool"
+  ],
+  "requests": 2
+}

@@ -1,0 +1,25 @@
+{
+  "id": "meta-0218",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "topk": [
+      "TripTool"
+    ],
+    "v2_cover": [
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "v2_route": [
+      "TripTool"
+    ]
+  },
+  "gold": [
+    "PDF&URLTool",
+    "TripAdviceTool"
+  ],
+  "requests": 2
+}

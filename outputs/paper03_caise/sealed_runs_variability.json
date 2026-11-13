@@ -1,0 +1,101 @@
+{
+ "n_runs": 5,
+ "n": 96,
+ "methods": {
+  "topk_static": {
+   "successes": [
+    63,
+    59,
+    59,
+    60,
+    63
+   ],
+   "mean": 60.8,
+   "sd": 2.04939015319192,
+   "min": 59,
+   "max": 63,
+   "items_identical_outcome_all_runs": 77
+  },
+  "topk_recovery": {
+   "successes": [
+    78,
+    73,
+    74,
+    73,
+    78
+   ],
+   "mean": 75.2,
+   "sd": 2.588435821108957,
+   "min": 73,
+   "max": 78,
+   "items_identical_outcome_all_runs": 67
+  },
+  "route_static": {
+   "successes": [
+    76,
+    77,
+    77,
+    77,
+    77
+   ],
+   "mean": 76.8,
+   "sd": 0.4472135954999579,
+   "min": 76,
+   "max": 77,
+   "items_identical_outcome_all_runs": 95
+  },
+  "route_recovery": {
+   "successes": [
+    94,
+    96,
+    96,
+    96,
+    96
+   ],
+   "mean": 95.6,
+   "sd": 0.8944271909999159,
+   "min": 94,
+   "max": 96,
+   "items_identical_outcome_all_runs": 94
+  },
+  "route_constraints_off_static": {
+   "successes": [
+    71,
+    73,
+    71,
+    72,
+    72
+   ],
+   "mean": 71.8,
+   "sd": 0.8366600265340756,
+   "min": 71,
+   "max": 73,
+   "items_identical_outcome_all_runs": 93
+  },
+  "route_constraints_off_recovery": {
+   "successes": [
+    89,
+    92,
+    90,
+    91,
+    91
+   ],
+   "mean": 90.6,
+   "sd": 1.140175425099138,
+   "min": 89,
+   "max": 92,
+   "items_identical_outcome_all_runs": 92
+  }
+ },
+ "items_identical_static_selection_all_runs": {
+  "topk": 64,
+  "route": 90
+ },
+ "route_recovery_minus_topk_static_per_run": [
+  31,
+  37,
+  37,
+  36,
+  33
+ ]
+}

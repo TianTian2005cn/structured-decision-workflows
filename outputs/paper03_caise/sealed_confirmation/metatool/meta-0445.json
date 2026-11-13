@@ -1,0 +1,21 @@
+{
+  "id": "meta-0445",
+  "route": "topk",
+  "selections": {
+    "threshold": [],
+    "topk": [
+      "PDF&URLTool"
+    ],
+    "v2_cover": [
+      "PDF&URLTool"
+    ],
+    "v2_route": [
+      "PDF&URLTool"
+    ]
+  },
+  "gold": [
+    "ResearchFinder",
+    "ResearchHelper"
+  ],
+  "requests": 2
+}

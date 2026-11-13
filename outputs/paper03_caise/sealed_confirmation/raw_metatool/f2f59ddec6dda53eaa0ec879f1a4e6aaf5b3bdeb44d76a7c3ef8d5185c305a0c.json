@@ -1,0 +1,277 @@
+{
+  "utc": "2026-11-07T01:30:41.843916+00:00",
+  "sample_id": "meta-0368",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "request_sha256": "f2f59ddec6dda53eaa0ec879f1a4e6aaf5b3bdeb44d76a7c3ef8d5185c305a0c",
+  "request": {
+    "model": "jev-1.14.0",
+    "state": {
+      "task": "tools",
+      "input": "Select all tool categories needed to fulfill this request. Do not execute tools.\nRequest: What are the popular programming languages used in data science? Can you recommend both online courses and job positions that require proficiency in these languages?",
+      "options": [
+        {
+          "id": "ShoppingAssistant",
+          "meaning": "Manage your cart, and display QR code for easy cart to enhance your online shopping experience."
+        },
+        {
+          "id": "ProductComparison",
+          "meaning": "Compare multiple product options for informed decisions."
+        },
+        {
+          "id": "PodcastTool",
+          "meaning": "Search for podcasts and summarize their content."
+        },
+        {
+          "id": "CompanyInfoTool",
+          "meaning": "Obtain relevant information about global companies from databases or knowledge graphs."
+        },
+        {
+          "id": "MusicTool",
+          "meaning": "Create music playlists, search for music, and check out the latest music trends."
+        },
+        {
+          "id": "RepoTool",
+          "meaning": "Discover GitHub projects tailored to your needs, explore their structures with insightful summaries, and get quick coding solutions with curated snippets. Elevate your coding journey with RepoTool, your go-to companion for GitHub project exploration and code mastery."
+        },
+        {
+          "id": "PolishTool",
+          "meaning": "Elevate your content with our AI-powered tool, which utilizes advanced rewriting techniques to create more human-like expressions and foster creative inspiration."
+        },
+        {
+          "id": "HouseRentingTool",
+          "meaning": "Tool that provide all sorts of information about house renting"
+        },
+        {
+          "id": "ChartTool",
+          "meaning": "A versatile chart and diagram tool that can create and display diagrams or using networkx and matplotlib. It allows you to build, modify, and draw various charts and graphs within the chat interface."
+        },
+        {
+          "id": "PDF&URLTool",
+          "meaning": "Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code."
+        },
+        {
+          "id": "MediaTool",
+          "meaning": "Your media and entertainment companion, offering recommendations for TV shows, movies, books, and podcasts, while providing access to free ad-supported content across the web."
+        },
+        {
+          "id": "StrologyTool",
+          "meaning": "Povides strology services for you."
+        },
+        {
+          "id": "TripAdviceTool",
+          "meaning": "A comprehensive travel assistantn that makes travel planning more vivid and practical. It offers tourism activities, accommodation and attraction recommendations, aiming to provide users with a more enjoyable and enriching travel experience through technology."
+        },
+        {
+          "id": "GameTool",
+          "meaning": "Get game-related information and recommend games."
+        },
+        {
+          "id": "ExchangeTool",
+          "meaning": "Seamlessly convert currencies with our integrated currency conversion tool."
+        },
+        {
+          "id": "Discount",
+          "meaning": "Discover discounts and coupon codes to save money on products."
+        },
+        {
+          "id": "GiftTool",
+          "meaning": "Provide suggestions for gift selection."
+        },
+        {
+          "id": "HousePurchasingTool",
+          "meaning": "Tool that provide all sorts of information about house purchasing"
+        },
+        {
+          "id": "WebsiteTool",
+          "meaning": "Quickly create and deploy websites, and publish content on them."
+        },
+        {
+          "id": "ResumeTool",
+          "meaning": "Quickly create resumes and receive feedback on your resume."
+        },
+        {
+          "id": "ResearchHelper",
+          "meaning": "Tool that offers additional functions beyond searching academic papers, such as generating mind maps, answering user questions and storing them in specific formats."
+        },
+        {
+          "id": "NASATool",
+          "meaning": "A platform for exploring space, allowing users to search and discover NASA images and utilize NASA's vast media library."
+        },
+        {
+          "id": "ProductSearch",
+          "meaning": "Find products tailored to your preferences with personalized recommendations and smart filters for specific needs."
+        },
+        {
+          "id": "TripTool",
+          "meaning": "Offer discounted hotel and accommodation bookings, along with personalized hotel and product searches, travel planning, image editing, and more, helping users easily plan their trips and find accommodation and transportation options."
+        },
+        {
+          "id": "NewsTool",
+          "meaning": "Stay connected to global events with our up-to-date news around the world."
+        },
+        {
+          "id": "local",
+          "meaning": "Discover and support restaurants, shops & services near you."
+        },
+        {
+          "id": "SEOTool",
+          "meaning": "Tool that provides users with SEO analytics content."
+        },
+        {
+          "id": "EarthquakeTool",
+          "meaning": "Provides real-time earthquake notifications and news."
+        },
+        {
+          "id": "MemoryTool",
+          "meaning": "A learning application with spaced repetition functionality that allows users to create flashcards and review them."
+        },
+        {
+          "id": "LawTool",
+          "meaning": "Enables quick search functionality for relevant laws."
+        },
+        {
+          "id": "NotesTool",
+          "meaning": "A full-featured reminder and to-do list management tool where you can add, delete, list, and mark reminders."
+        },
+        {
+          "id": "CourseTool",
+          "meaning": "Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content."
+        },
+        {
+          "id": "WeatherTool",
+          "meaning": "Provide you with the latest weather information."
+        },
+        {
+          "id": "BookTool",
+          "meaning": "AI-powered personalized book recommendations, access to free children's picture books, and the ability to search and create books on Wikidocs."
+        },
+        {
+          "id": "DietTool",
+          "meaning": "A tool that simplifies calorie counting, tracks diet, and provides insights from many restaurants and grocery stores. Explore recipe , menus, and cooking tips from millions of users, and access recipe consultations and ingredient delivery services from thousands of stores."
+        },
+        {
+          "id": "MediaModifyTool",
+          "meaning": "A versatile image editing application with a vast selection of user-generated filters, allowing you to effortlessly edit photos and videos. It includes embedded features such as resizing, cropping, and blurring."
+        },
+        {
+          "id": "CharityTool",
+          "meaning": "Empower your charitable endeavors by accessing a comprehensive platform featuring nonprofit organization data, including their mission, key personnel, ratings, and financial information."
+        },
+        {
+          "id": "MemeTool",
+          "meaning": "Create memes."
+        },
+        {
+          "id": "JobTool",
+          "meaning": "Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success."
+        },
+        {
+          "id": "ResearchFinder",
+          "meaning": "Tool for searching academic papers."
+        },
+        {
+          "id": "RestaurantBookingTool",
+          "meaning": "Tool for booking restaurant"
+        },
+        {
+          "id": "URLTool",
+          "meaning": "Provide domain and URL information and assist users with domain registration."
+        },
+        {
+          "id": "FinanceTool",
+          "meaning": "Stay informed with the latest financial updates, real-time insights, and analysis on a wide range of options, stocks, cryptocurrencies, and more."
+        },
+        {
+          "id": "Review",
+          "meaning": "Analyze and summarize reviews, providing advantages and disadvantages analysis of products."
+        },
+        {
+          "id": "VideoSummarizeTool",
+          "meaning": "enerate summaries from YouTube video links, offer question-answering capabilities, analyze and interpret the content of YouTube videos, and support interactions with online video platforms such as YouTube and Daily Motion."
+        },
+        {
+          "id": "MapTool",
+          "meaning": "Experience the next level of map navigation with our innovative chatbot, leveraging Google Maps API to generate customized map images based on location, tilt, and style, and even annotate maps using latitude and longitude coordinates."
+        },
+        {
+          "id": "DataRetrievalTool",
+          "meaning": "An tool that expands memory. It stores and retrieves user information to provide personalized assistance and generates real-time chat responses using the knowledge from the document collection."
+        }
+      ]
+    },
+    "questions": {
+      "subset": {
+        "type": "choice",
+        "instructions": "Which ONE of the following complete answer sets is most correct? All omitted options are excluded.",
+        "criteria": {
+          "s0": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.)",
+          "s1": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.)",
+          "s2": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), ResearchHelper (Tool that offers additional functions beyond searching academic papers, such as generating mind maps, answering user questions and storing them in specific formats.)",
+          "s3": "Select exactly: CompanyInfoTool (Obtain relevant information about global companies from databases or knowledge graphs.), CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.)",
+          "s4": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), DataRetrievalTool (An tool that expands memory. It stores and retrieves user information to provide personalized assistance and generates real-time chat responses using the knowledge from the document collection.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.)",
+          "s5": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), RepoTool (Discover GitHub projects tailored to your needs, explore their structures with insightful summaries, and get quick coding solutions with curated snippets. Elevate your coding journey with RepoTool, your go-to companion for GitHub project exploration and code mastery.)",
+          "s6": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), ResearchFinder (Tool for searching academic papers.)",
+          "s7": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), ResumeTool (Quickly create resumes and receive feedback on your resume.)",
+          "s8": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), NewsTool (Stay connected to global events with our up-to-date news around the world.)",
+          "s9": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), ProductComparison (Compare multiple product options for informed decisions.)",
+          "s10": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.), ResearchHelper (Tool that offers additional functions beyond searching academic papers, such as generating mind maps, answering user questions and storing them in specific formats.)",
+          "s11": "Select exactly: CompanyInfoTool (Obtain relevant information about global companies from databases or knowledge graphs.), CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.)",
+          "s12": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), DataRetrievalTool (An tool that expands memory. It stores and retrieves user information to provide personalized assistance and generates real-time chat responses using the knowledge from the document collection.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.)",
+          "s13": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.), RepoTool (Discover GitHub projects tailored to your needs, explore their structures with insightful summaries, and get quick coding solutions with curated snippets. Elevate your coding journey with RepoTool, your go-to companion for GitHub project exploration and code mastery.)",
+          "s14": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.), ResearchFinder (Tool for searching academic papers.)",
+          "s15": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.), ResumeTool (Quickly create resumes and receive feedback on your resume.)",
+          "s16": "Select NO options (empty answer set)",
+          "s17": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.)",
+          "s18": "Select exactly: JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.)",
+          "s19": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), ResearchHelper (Tool that offers additional functions beyond searching academic papers, such as generating mind maps, answering user questions and storing them in specific formats.)",
+          "s20": "Select exactly: JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), ResearchHelper (Tool that offers additional functions beyond searching academic papers, such as generating mind maps, answering user questions and storing them in specific formats.)",
+          "s21": "Select exactly: CompanyInfoTool (Obtain relevant information about global companies from databases or knowledge graphs.), CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.)",
+          "s22": "Select exactly: CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.)",
+          "s23": "Select exactly: CompanyInfoTool (Obtain relevant information about global companies from databases or knowledge graphs.), CourseTool (Unlock a world of knowledge and growth with our comprehensive learning platform, offering a diverse range of courses from renowned providers like Coursera and Upskillr, personalized language learning, professional team information lookup, open course schedule discovery, and top-tier university content.), JobTool (Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.), PDF&URLTool (Interact with any PDF files, provide page references for fact-checking, support chatting via Google Drive links to AI-driven PDF summaries and analysis; engage in interactive conversations with websites, access links on the internet to fetch required information, including generating articles and intelligent assistance for interactions with source code.), ResearchHelper (Tool that offers additional functions beyond searching academic papers, such as generating mind maps, answering user questions and storing them in specific formats.)"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+      "subset": {
+        "type": "choice",
+        "choice": "s0",
+        "confidence": 0.93,
+        "probabilities": {
+          "s0": 0.93,
+          "s1": 0.07,
+          "s2": 0.0,
+          "s3": 0.0,
+          "s4": 0.0,
+          "s5": 0.0,
+          "s6": 0.0,
+          "s7": 0.0,
+          "s8": 0.0,
+          "s9": 0.0,
+          "s10": 0.0,
+          "s11": 0.0,
+          "s12": 0.0,
+          "s13": 0.0,
+          "s14": 0.0,
+          "s15": 0.0,
+          "s16": 0.0,
+          "s17": 0.0,
+          "s18": 0.0,
+          "s19": 0.0,
+          "s20": 0.0,
+          "s21": 0.0,
+          "s22": 0.0,
+          "s23": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 5577,
+      "output_tokens": 224
+    }
+  },
+  "http_attempts": 1,
+  "elapsed_seconds": 1.1657593049999377
+}

@@ -1,0 +1,28 @@
+{
+  "id": "meta-0157",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "MusicTool",
+      "PDF&URLTool"
+    ],
+    "topk": [
+      "MusicTool",
+      "PDF&URLTool"
+    ],
+    "v2_cover": [
+      "DietTool",
+      "MusicTool",
+      "PDF&URLTool"
+    ],
+    "v2_route": [
+      "MusicTool",
+      "PDF&URLTool"
+    ]
+  },
+  "gold": [
+    "MusicTool",
+    "PDF&URLTool"
+  ],
+  "requests": 2
+}

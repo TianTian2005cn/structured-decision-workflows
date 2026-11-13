@@ -1,0 +1,24 @@
+{
+  "id": "meta-0132",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "RepoTool"
+    ],
+    "topk": [
+      "RepoTool"
+    ],
+    "v2_cover": [
+      "PDF&URLTool",
+      "RepoTool"
+    ],
+    "v2_route": [
+      "RepoTool"
+    ]
+  },
+  "gold": [
+    "CourseTool",
+    "RepoTool"
+  ],
+  "requests": 2
+}

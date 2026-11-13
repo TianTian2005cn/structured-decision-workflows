@@ -1,0 +1,27 @@
+{
+  "id": "meta-0068",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "MusicTool",
+      "NewsTool"
+    ],
+    "topk": [
+      "MusicTool",
+      "NewsTool"
+    ],
+    "v2_cover": [
+      "MusicTool",
+      "NewsTool"
+    ],
+    "v2_route": [
+      "MusicTool",
+      "NewsTool"
+    ]
+  },
+  "gold": [
+    "MusicTool",
+    "NewsTool"
+  ],
+  "requests": 2
+}

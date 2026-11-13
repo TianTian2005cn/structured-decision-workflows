@@ -1,0 +1,27 @@
+{
+  "id": "meta-0146",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "FinanceTool",
+      "PDF&URLTool"
+    ],
+    "topk": [
+      "FinanceTool",
+      "PDF&URLTool"
+    ],
+    "v2_cover": [
+      "FinanceTool",
+      "PDF&URLTool"
+    ],
+    "v2_route": [
+      "FinanceTool",
+      "PDF&URLTool"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "PDF&URLTool"
+  ],
+  "requests": 2
+}

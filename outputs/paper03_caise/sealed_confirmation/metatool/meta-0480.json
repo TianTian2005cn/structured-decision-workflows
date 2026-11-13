@@ -1,0 +1,26 @@
+{
+  "id": "meta-0480",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "TripAdviceTool"
+    ],
+    "topk": [
+      "Discount",
+      "TripAdviceTool"
+    ],
+    "v2_cover": [
+      "Discount",
+      "TripAdviceTool"
+    ],
+    "v2_route": [
+      "Discount",
+      "TripAdviceTool"
+    ]
+  },
+  "gold": [
+    "Discount",
+    "TripAdviceTool"
+  ],
+  "requests": 2
+}

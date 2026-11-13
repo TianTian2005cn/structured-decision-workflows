@@ -1,0 +1,27 @@
+{
+  "id": "meta-0341",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "HousePurchasingTool",
+      "WeatherTool"
+    ],
+    "topk": [
+      "HousePurchasingTool",
+      "WeatherTool"
+    ],
+    "v2_cover": [
+      "HousePurchasingTool",
+      "WeatherTool"
+    ],
+    "v2_route": [
+      "HousePurchasingTool",
+      "WeatherTool"
+    ]
+  },
+  "gold": [
+    "HousePurchasingTool",
+    "WeatherTool"
+  ],
+  "requests": 2
+}

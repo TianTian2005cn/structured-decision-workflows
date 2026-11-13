@@ -1,0 +1,27 @@
+{
+  "id": "meta-0395",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "NewsTool",
+      "RepoTool"
+    ],
+    "topk": [
+      "NewsTool",
+      "RepoTool"
+    ],
+    "v2_cover": [
+      "NewsTool",
+      "RepoTool"
+    ],
+    "v2_route": [
+      "NewsTool",
+      "RepoTool"
+    ]
+  },
+  "gold": [
+    "NewsTool",
+    "RepoTool"
+  ],
+  "requests": 2
+}

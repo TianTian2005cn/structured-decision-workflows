@@ -1,0 +1,25 @@
+{
+  "id": "workflow-20261031-012",
+  "difficulty": "tight_budget",
+  "request_text": "Calculate the total gross (before refunds) transaction value in USD across all regions for the months 2026-07 through 2026-08, counting settled transactions only, delivered as a JSON report.",
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 0.0
+    },
+    "topk_recovery": {
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 6.0
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "meta-0325",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "NewsTool"
+    ],
+    "topk": [
+      "NewsTool"
+    ],
+    "v2_cover": [
+      "NewsTool"
+    ],
+    "v2_route": [
+      "NewsTool"
+    ]
+  },
+  "gold": [
+    "HousePurchasingTool",
+    "NewsTool"
+  ],
+  "requests": 2
+}

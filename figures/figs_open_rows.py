@@ -1,0 +1,15 @@
+rows=[ # label, role, env, units, k_sdm,n, k_ctl,n, reported paired CI
+ ('MetaTool select-2','(a) set selection','MetaTool','96 q.',71,96,81,96,None),
+ ('ToolMaze V4','(b) dyn.\\ menu+rec.','ToolMaze','60/12',24,60,24,60,None),
+ ('ToolMaze V5','(b) sel.\\ menu+rec.','ToolMaze','80/16',35,80,46,80,None),
+ ('ToolMaze V6','(c) evidence+rec.','ToolMaze','60/12',31,60,35,60,None),
+ ('CCTU V6','(c) evidence+rec.','CCTU','32 q.',6,32,7,32,None),
+ ('ToolMaze V7','(d) ordering','ToolMaze','100/20',52,100,54,100,(-6.0,2.0)),
+ ('CCTU V7','(d) ordering','CCTU','64 q.',15,64,20,64,(-15.62,0.0)),
+ ('Retail V7','(d) ordering','Retail','20 t.',19,20,19,20,(-15.0,15.0)),
+ ('ToolMaze V8','(e) goal-gap repair','ToolMaze','200/40',106,200,114,200,(-8.5,0.0)),
+ ('Airline V8','(e) goal-gap repair','Airline','40 t.',22,40,25,40,(-17.5,0.0)),
+ ('ToolMaze C1','(f) executor routing','ToolMaze','40/8',20,40,21,40,None),
+ ('Retail C1','(f) executor routing','Retail','16 t.',15,16,16,16,None),
+ ('ToolMaze D1','(g) direct actions','ToolMaze','20/4',11,20,11,20,None),
+ ('Retail D1','(g) direct actions','Retail','8 t.',8,8,7,8,None)]

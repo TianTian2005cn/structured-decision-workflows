@@ -1,0 +1,10 @@
+{
+  "threshold_from_old_development": 0.8,
+  "legacy_slots": 16,
+  "policy": {
+    "min_count_probability": 0.0,
+    "min_boundary_margin": 0.0,
+    "uncertain_action": "constrained"
+  },
+  "frozen_utc": "2026-10-30T09:20:19.265463+00:00"
+}

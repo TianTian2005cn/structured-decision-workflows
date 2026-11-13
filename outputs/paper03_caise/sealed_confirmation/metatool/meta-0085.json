@@ -1,0 +1,27 @@
+{
+  "id": "meta-0085",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "NewsTool",
+      "ResearchFinder"
+    ],
+    "topk": [
+      "NewsTool",
+      "ResearchFinder"
+    ],
+    "v2_cover": [
+      "NewsTool",
+      "ResearchFinder"
+    ],
+    "v2_route": [
+      "NewsTool",
+      "ResearchFinder"
+    ]
+  },
+  "gold": [
+    "NewsTool",
+    "ResearchFinder"
+  ],
+  "requests": 2
+}

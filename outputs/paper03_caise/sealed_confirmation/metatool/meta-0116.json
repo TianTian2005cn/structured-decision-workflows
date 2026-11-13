@@ -1,0 +1,27 @@
+{
+  "id": "meta-0116",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "CourseTool",
+      "TripAdviceTool"
+    ],
+    "topk": [
+      "CourseTool",
+      "TripAdviceTool"
+    ],
+    "v2_cover": [
+      "CourseTool",
+      "TripAdviceTool"
+    ],
+    "v2_route": [
+      "CourseTool",
+      "TripAdviceTool"
+    ]
+  },
+  "gold": [
+    "CourseTool",
+    "TripAdviceTool"
+  ],
+  "requests": 2
+}

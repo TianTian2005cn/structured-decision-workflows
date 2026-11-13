@@ -1,0 +1,27 @@
+{
+  "id": "meta-0449",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "ProductSearch",
+      "ResearchFinder"
+    ],
+    "topk": [
+      "ProductSearch",
+      "ResearchFinder"
+    ],
+    "v2_cover": [
+      "ProductSearch",
+      "ResearchFinder"
+    ],
+    "v2_route": [
+      "ProductSearch",
+      "ResearchFinder"
+    ]
+  },
+  "gold": [
+    "ProductSearch",
+    "ResearchHelper"
+  ],
+  "requests": 2
+}

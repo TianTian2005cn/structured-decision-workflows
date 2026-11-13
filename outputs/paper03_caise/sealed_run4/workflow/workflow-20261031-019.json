@@ -1,0 +1,188 @@
+{
+  "id": "workflow-20261031-019",
+  "family": "0209a4b56c44c0eb79d1dca2b8866bc41f3fe24decff9c4acca8b3ad7627ccde",
+  "difficulty": "distractors",
+  "budget": 7.0,
+  "primary_fails": false,
+  "selections": {
+    "topk": [
+      "convert_usd",
+      "filter_region",
+      "filter_settled",
+      "read_primary",
+      "report_json",
+      "subtract_refunds",
+      "sum_values"
+    ],
+    "route": [
+      "convert_usd",
+      "filter_region",
+      "read_primary",
+      "report_json",
+      "subtract_refunds",
+      "sum_values"
+    ],
+    "route_constraints_off": [
+      "convert_usd",
+      "filter_region",
+      "read_primary",
+      "report_json",
+      "subtract_refunds",
+      "sum_values"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 7.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": false,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"total\", \"value\": 9.4649374}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 21.4116969
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "topk_recovery": {
+      "attempts": [
+        {
+          "success": false,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "filter_settled",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_json"
+          ],
+          "cost": 7.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"total\", \"value\": 9.4649374}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 21.4116969
+        }
+      ],
+      "success": false,
+      "total_cost": 7.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_json"
+          ],
+          "cost": 6.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"total\", \"value\": 21.4116969}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 21.4116969
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_json"
+          ],
+          "cost": 6.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"total\", \"value\": 21.4116969}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 21.4116969
+        }
+      ],
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_static": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_json"
+          ],
+          "cost": 6.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"total\", \"value\": 21.4116969}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 21.4116969
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "sum_values",
+            "report_json"
+          ],
+          "cost": 6.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"total\", \"value\": 21.4116969}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 21.4116969
+        }
+      ],
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    }
+  }
+}

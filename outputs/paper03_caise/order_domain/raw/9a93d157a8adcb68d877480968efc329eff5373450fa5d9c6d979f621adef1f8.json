@@ -1,0 +1,428 @@
+{
+  "utc": "2026-11-07T05:53:53.643913+00:00",
+  "sample_id": "order-20261107-013",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "request_sha256": "9a93d157a8adcb68d877480968efc329eff5373450fa5d9c6d979f621adef1f8",
+  "request": {
+    "model": "jev-1.14.0",
+    "state": {
+      "task": "tools",
+      "input": "Process this customer order and issue exactly one invoice. Business rules: a coupon gives 10% off the merchandise subtotal; customers of tier \"gold\" get a 5% loyalty discount; discounts never stack, and a coupon, if present, takes precedence over the loyalty discount. International orders always ship by freight (40 + 2 per kg); otherwise express (25 + 1.5 per kg) if requested, else ground (8 + 0.5 per kg). Gift wrapping costs 5 per order. Domestic orders pay 8% sales tax on discounted merchandise and gift wrapping; EU orders pay 20% VAT on discounted merchandise, gift wrapping and shipping; international orders are tax-exempt exports. The invoice total is discounted merchandise + gift wrapping + shipping + tax. Do not override prices or send marketing messages. Each tool runs at most once; use the archive only when necessary.\nRequest: {\"customer_tier\": \"standard\", \"destination\": \"eu\", \"coupon\": \"SAVE10\", \"express\": true, \"gift_wrap\": false, \"invoice_format\": \"pdf\", \"currency\": \"USD\"}\nOrder lines: [{\"sku\": \"SKU-304\", \"qty\": 2, \"unit_price\": 68.37, \"weight_kg\": 1.7}, {\"sku\": \"SKU-491\", \"qty\": 3, \"unit_price\": 47.08, \"weight_kg\": 4.0}, {\"sku\": \"SKU-754\", \"qty\": 1, \"unit_price\": 51.88, \"weight_kg\": 0.9}, {\"sku\": \"SKU-365\", \"qty\": 1, \"unit_price\": 51.01, \"weight_kg\": 3.0}, {\"sku\": \"SKU-263\", \"qty\": 3, \"unit_price\": 12.4, \"weight_kg\": 2.3}, {\"sku\": \"SKU-570\", \"qty\": 3, \"unit_price\": 43.37, \"weight_kg\": 2.9}, {\"sku\": \"SKU-287\", \"qty\": 2, \"unit_price\": 37.31, \"weight_kg\": 1.1}]",
+      "options": [
+        {
+          "id": "load_order",
+          "meaning": "Load the order lines from the primary order service. It may fail at runtime."
+        },
+        {
+          "id": "load_order_archive",
+          "meaning": "Load an identical copy of the order lines from the archive; costs two units."
+        },
+        {
+          "id": "check_stock",
+          "meaning": "Verify stock availability for all order lines (required before any shipment is booked)."
+        },
+        {
+          "id": "apply_coupon",
+          "meaning": "Apply the customer coupon to the merchandise subtotal."
+        },
+        {
+          "id": "apply_loyalty_discount",
+          "meaning": "Apply the loyalty discount of the customer tier to the merchandise subtotal."
+        },
+        {
+          "id": "ship_ground",
+          "meaning": "Book ground shipping for the order and add its fee."
+        },
+        {
+          "id": "ship_express",
+          "meaning": "Book express shipping for the order and add its fee."
+        },
+        {
+          "id": "ship_freight",
+          "meaning": "Book international freight shipping for the order and add its fee."
+        },
+        {
+          "id": "add_gift_wrap",
+          "meaning": "Add gift wrapping to the order and its fee."
+        },
+        {
+          "id": "tax_domestic",
+          "meaning": "Compute domestic sales tax."
+        },
+        {
+          "id": "tax_eu_vat",
+          "meaning": "Compute EU value-added tax."
+        },
+        {
+          "id": "tax_export_exempt",
+          "meaning": "Mark the order as tax-exempt export (zero tax)."
+        },
+        {
+          "id": "compute_total",
+          "meaning": "Compute the invoice total from all current amounts."
+        },
+        {
+          "id": "invoice_pdf",
+          "meaning": "Issue the invoice as a PDF document record."
+        },
+        {
+          "id": "invoice_edi",
+          "meaning": "Issue the invoice as an EDI message record."
+        },
+        {
+          "id": "price_override",
+          "meaning": "Manually override unit prices. Not permitted without a manager request."
+        },
+        {
+          "id": "send_marketing_email",
+          "meaning": "Send a marketing e-mail to the customer. Not permitted in this workflow."
+        }
+      ],
+      "requires_any": {
+        "check_stock": [
+          "load_order",
+          "load_order_archive"
+        ],
+        "price_override": [
+          "load_order",
+          "load_order_archive"
+        ],
+        "apply_coupon": [
+          "load_order",
+          "load_order_archive"
+        ],
+        "apply_loyalty_discount": [
+          "load_order",
+          "load_order_archive"
+        ],
+        "add_gift_wrap": [
+          "load_order",
+          "load_order_archive"
+        ],
+        "ship_ground": [
+          "check_stock"
+        ],
+        "ship_express": [
+          "check_stock"
+        ],
+        "ship_freight": [
+          "check_stock"
+        ],
+        "tax_domestic": [
+          "ship_ground",
+          "ship_express",
+          "ship_freight"
+        ],
+        "tax_eu_vat": [
+          "ship_ground",
+          "ship_express",
+          "ship_freight"
+        ],
+        "tax_export_exempt": [
+          "ship_ground",
+          "ship_express",
+          "ship_freight"
+        ],
+        "compute_total": [
+          "tax_domestic",
+          "tax_eu_vat",
+          "tax_export_exempt"
+        ],
+        "invoice_pdf": [
+          "compute_total"
+        ],
+        "invoice_edi": [
+          "compute_total"
+        ],
+        "send_marketing_email": [
+          "invoice_pdf",
+          "invoice_edi"
+        ]
+      },
+      "precedes_if_both_selected": {
+        "apply_coupon": [
+          "tax_domestic",
+          "tax_eu_vat",
+          "tax_export_exempt",
+          "compute_total"
+        ],
+        "apply_loyalty_discount": [
+          "tax_domestic",
+          "tax_eu_vat",
+          "tax_export_exempt",
+          "compute_total"
+        ],
+        "add_gift_wrap": [
+          "tax_domestic",
+          "tax_eu_vat",
+          "tax_export_exempt",
+          "compute_total"
+        ],
+        "price_override": [
+          "apply_coupon",
+          "apply_loyalty_discount",
+          "tax_domestic",
+          "tax_eu_vat",
+          "tax_export_exempt",
+          "compute_total"
+        ]
+      },
+      "excludes": [
+        [
+          "load_order",
+          "load_order_archive"
+        ],
+        [
+          "apply_coupon",
+          "apply_loyalty_discount"
+        ],
+        [
+          "invoice_pdf",
+          "invoice_edi"
+        ],
+        [
+          "ship_ground",
+          "ship_express"
+        ],
+        [
+          "ship_ground",
+          "ship_freight"
+        ],
+        [
+          "ship_express",
+          "ship_freight"
+        ],
+        [
+          "tax_domestic",
+          "tax_eu_vat"
+        ],
+        [
+          "tax_domestic",
+          "tax_export_exempt"
+        ],
+        [
+          "tax_eu_vat",
+          "tax_export_exempt"
+        ]
+      ],
+      "costs": {
+        "load_order": 1.0,
+        "load_order_archive": 2.0,
+        "check_stock": 1.0,
+        "apply_coupon": 1.0,
+        "apply_loyalty_discount": 1.0,
+        "ship_ground": 1.0,
+        "ship_express": 1.0,
+        "ship_freight": 1.0,
+        "add_gift_wrap": 1.0,
+        "tax_domestic": 1.0,
+        "tax_eu_vat": 1.0,
+        "tax_export_exempt": 1.0,
+        "compute_total": 1.0,
+        "invoice_pdf": 1.0,
+        "invoice_edi": 1.0,
+        "price_override": 3.0,
+        "send_marketing_email": 20.0
+      },
+      "budget": 8
+    },
+    "questions": {
+      "label_0": {
+        "type": "noul",
+        "instructions": "Is option load_order (Load the order lines from the primary order service. It may fail at runtime.) a correct / relevant member of the required answer set?"
+      },
+      "label_1": {
+        "type": "noul",
+        "instructions": "Is option load_order_archive (Load an identical copy of the order lines from the archive; costs two units.) a correct / relevant member of the required answer set?"
+      },
+      "label_2": {
+        "type": "noul",
+        "instructions": "Is option check_stock (Verify stock availability for all order lines (required before any shipment is booked).) a correct / relevant member of the required answer set?"
+      },
+      "label_3": {
+        "type": "noul",
+        "instructions": "Is option apply_coupon (Apply the customer coupon to the merchandise subtotal.) a correct / relevant member of the required answer set?"
+      },
+      "label_4": {
+        "type": "noul",
+        "instructions": "Is option apply_loyalty_discount (Apply the loyalty discount of the customer tier to the merchandise subtotal.) a correct / relevant member of the required answer set?"
+      },
+      "label_5": {
+        "type": "noul",
+        "instructions": "Is option ship_ground (Book ground shipping for the order and add its fee.) a correct / relevant member of the required answer set?"
+      },
+      "label_6": {
+        "type": "noul",
+        "instructions": "Is option ship_express (Book express shipping for the order and add its fee.) a correct / relevant member of the required answer set?"
+      },
+      "label_7": {
+        "type": "noul",
+        "instructions": "Is option ship_freight (Book international freight shipping for the order and add its fee.) a correct / relevant member of the required answer set?"
+      },
+      "label_8": {
+        "type": "noul",
+        "instructions": "Is option add_gift_wrap (Add gift wrapping to the order and its fee.) a correct / relevant member of the required answer set?"
+      },
+      "label_9": {
+        "type": "noul",
+        "instructions": "Is option tax_domestic (Compute domestic sales tax.) a correct / relevant member of the required answer set?"
+      },
+      "label_10": {
+        "type": "noul",
+        "instructions": "Is option tax_eu_vat (Compute EU value-added tax.) a correct / relevant member of the required answer set?"
+      },
+      "label_11": {
+        "type": "noul",
+        "instructions": "Is option tax_export_exempt (Mark the order as tax-exempt export (zero tax).) a correct / relevant member of the required answer set?"
+      },
+      "label_12": {
+        "type": "noul",
+        "instructions": "Is option compute_total (Compute the invoice total from all current amounts.) a correct / relevant member of the required answer set?"
+      },
+      "label_13": {
+        "type": "noul",
+        "instructions": "Is option invoice_pdf (Issue the invoice as a PDF document record.) a correct / relevant member of the required answer set?"
+      },
+      "label_14": {
+        "type": "noul",
+        "instructions": "Is option invoice_edi (Issue the invoice as an EDI message record.) a correct / relevant member of the required answer set?"
+      },
+      "label_15": {
+        "type": "noul",
+        "instructions": "Is option price_override (Manually override unit prices. Not permitted without a manager request.) a correct / relevant member of the required answer set?"
+      },
+      "label_16": {
+        "type": "noul",
+        "instructions": "Is option send_marketing_email (Send a marketing e-mail to the customer. Not permitted in this workflow.) a correct / relevant member of the required answer set?"
+      },
+      "cardinality": {
+        "type": "choice",
+        "instructions": "How many distinct options exactly should be selected in total? Select one count.",
+        "criteria": {
+          "k0": "Exactly 0 options are required",
+          "k1": "Exactly 1 options are required",
+          "k2": "Exactly 2 options are required",
+          "k3": "Exactly 3 options are required",
+          "k4": "Exactly 4 options are required",
+          "k5": "Exactly 5 options are required",
+          "k6": "Exactly 6 options are required",
+          "k7": "Exactly 7 options are required",
+          "k8": "Exactly 8 options are required",
+          "k9": "Exactly 9 options are required",
+          "k10": "Exactly 10 options are required",
+          "k11": "Exactly 11 options are required",
+          "k12": "Exactly 12 options are required",
+          "k13": "Exactly 13 options are required",
+          "k14": "Exactly 14 options are required",
+          "k15": "Exactly 15 options are required",
+          "k16": "Exactly 16 options are required",
+          "k17": "Exactly 17 options are required"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+      "label_0": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "label_1": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "label_2": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "label_3": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "label_4": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "label_5": {
+        "type": "noul",
+        "noul": 0.02
+      },
+      "label_6": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "label_7": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "label_8": {
+        "type": "noul",
+        "noul": 0.02
+      },
+      "label_9": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "label_10": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "label_11": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "label_12": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "label_13": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "label_14": {
+        "type": "noul",
+        "noul": 0.02
+      },
+      "label_15": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "label_16": {
+        "type": "noul",
+        "noul": 0.01
+      },
+      "cardinality": {
+        "type": "choice",
+        "choice": "k8",
+        "confidence": 0.31,
+        "probabilities": {
+          "k0": 0.0,
+          "k1": 0.0,
+          "k2": 0.0,
+          "k3": 0.0,
+          "k4": 0.0,
+          "k5": 0.01,
+          "k6": 0.07,
+          "k7": 0.28,
+          "k8": 0.35,
+          "k9": 0.17,
+          "k10": 0.07,
+          "k11": 0.04,
+          "k12": 0.01,
+          "k13": 0.0,
+          "k14": 0.0,
+          "k15": 0.0,
+          "k16": 0.0,
+          "k17": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 3046,
+      "output_tokens": 485
+    }
+  },
+  "http_attempts": 1,
+  "elapsed_seconds": 1.091099690998817
+}

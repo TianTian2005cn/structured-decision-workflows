@@ -1,0 +1,28 @@
+{
+  "id": "meta-0236",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "JobTool",
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "topk": [
+      "JobTool",
+      "TripTool"
+    ],
+    "v2_cover": [
+      "JobTool",
+      "TripTool"
+    ],
+    "v2_route": [
+      "JobTool",
+      "TripTool"
+    ]
+  },
+  "gold": [
+    "JobTool",
+    "TripAdviceTool"
+  ],
+  "requests": 2
+}

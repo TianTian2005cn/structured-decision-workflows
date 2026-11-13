@@ -1,0 +1,35 @@
+{
+  "id": "meta-0455",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "NewsTool",
+      "ProductComparison",
+      "ProductSearch",
+      "Review"
+    ],
+    "topk": [
+      "NewsTool",
+      "ProductComparison",
+      "ProductSearch",
+      "Review"
+    ],
+    "v2_cover": [
+      "NewsTool",
+      "ProductComparison",
+      "ProductSearch",
+      "Review"
+    ],
+    "v2_route": [
+      "NewsTool",
+      "ProductComparison",
+      "ProductSearch",
+      "Review"
+    ]
+  },
+  "gold": [
+    "NewsTool",
+    "ProductSearch"
+  ],
+  "requests": 2
+}

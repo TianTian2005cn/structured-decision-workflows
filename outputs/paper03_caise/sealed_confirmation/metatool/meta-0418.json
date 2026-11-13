@@ -1,0 +1,28 @@
+{
+  "id": "meta-0418",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "JobTool",
+      "ResearchFinder"
+    ],
+    "topk": [
+      "JobTool",
+      "ResearchFinder"
+    ],
+    "v2_cover": [
+      "JobTool",
+      "NewsTool",
+      "ResearchFinder"
+    ],
+    "v2_route": [
+      "JobTool",
+      "ResearchFinder"
+    ]
+  },
+  "gold": [
+    "JobTool",
+    "ResearchFinder"
+  ],
+  "requests": 2
+}

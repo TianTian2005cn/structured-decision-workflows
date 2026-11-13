@@ -1,0 +1,163 @@
+{
+  "id": "workflow-20261031-114",
+  "family": "4dc72c4d428d1152339c4c6b926b00ed0c328db66137a8d7b82b433c76b7d967",
+  "difficulty": "tight_budget",
+  "budget": 5.0,
+  "primary_fails": false,
+  "selections": {
+    "topk": [
+      "convert_usd",
+      "filter_region",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ],
+    "route": [
+      "filter_region",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ],
+    "route_constraints_off": [
+      "filter_region",
+      "median_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": false,
+          "valid": false,
+          "executed": [],
+          "cost": 0.0,
+          "artifact": null,
+          "error": "infeasible set or no legal execution order",
+          "failed_tool": null
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "topk_recovery": {
+      "attempts": [
+        {
+          "success": false,
+          "valid": false,
+          "executed": [],
+          "cost": 0.0,
+          "artifact": null,
+          "error": "infeasible set or no legal execution order",
+          "failed_tool": null
+        }
+      ],
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 5.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 5.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"West\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 455.15000000000003}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 455.15000000000003
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 5.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"West\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 455.15000000000003}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 455.15000000000003
+        }
+      ],
+      "success": true,
+      "total_cost": 5.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_static": {
+      "success": true,
+      "total_cost": 5.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 5.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"West\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 455.15000000000003}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 455.15000000000003
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "median_values",
+            "report_json"
+          ],
+          "cost": 5.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": true, \"period\": null, \"region\": \"West\", \"settled_only\": false, \"statistic\": \"median\", \"value\": 455.15000000000003}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 455.15000000000003
+        }
+      ],
+      "success": true,
+      "total_cost": 5.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "order-20261107-067",
+  "difficulty": "distractors",
+  "gold": [
+    "apply_loyalty_discount",
+    "check_stock",
+    "compute_total",
+    "invoice_pdf",
+    "load_order",
+    "ship_ground",
+    "tax_eu_vat"
+  ],
+  "selections": {
+    "topk": [
+      "apply_loyalty_discount",
+      "check_stock",
+      "compute_total",
+      "invoice_pdf",
+      "load_order",
+      "ship_freight",
+      "tax_eu_vat"
+    ],
+    "route": [
+      "apply_loyalty_discount",
+      "check_stock",
+      "compute_total",
+      "invoice_pdf",
+      "load_order",
+      "ship_freight",
+      "tax_eu_vat"
+    ],
+    "route_constraints_off": [
+      "apply_loyalty_discount",
+      "check_stock",
+      "compute_total",
+      "invoice_pdf",
+      "load_order",
+      "ship_freight",
+      "tax_eu_vat"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 7.0,
+      "valid": true,
+      "error": null
+    },
+    "topk_recovery": {
+      "success": false,
+      "total_cost": 7.0,
+      "replanned": false
+    },
+    "route_static": {
+      "success": false,
+      "total_cost": 7.0,
+      "valid": true,
+      "error": null
+    },
+    "route_recovery": {
+      "success": false,
+      "total_cost": 7.0,
+      "replanned": false
+    },
+    "route_constraints_off_static": {
+      "success": false,
+      "total_cost": 7.0,
+      "valid": true,
+      "error": null
+    },
+    "route_constraints_off_recovery": {
+      "success": false,
+      "total_cost": 7.0,
+      "replanned": false
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id": "workflow-20261031-243",
+  "family": "2dbb32d5b2d79ab57556ab173170b47c1e4d08c354da560336ef31e94d6f7e93",
+  "difficulty": "tight_budget",
+  "budget": 6.0,
+  "primary_fails": false,
+  "selections": {
+    "topk": [
+      "convert_usd",
+      "filter_region",
+      "filter_settled",
+      "median_values",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds"
+    ],
+    "route": [
+      "convert_usd",
+      "filter_region",
+      "median_values",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds"
+    ],
+    "route_constraints_off": [
+      "convert_usd",
+      "filter_region",
+      "median_values",
+      "read_primary",
+      "report_csv",
+      "subtract_refunds"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": false,
+          "valid": false,
+          "executed": [],
+          "cost": 0.0,
+          "artifact": null,
+          "error": "infeasible set or no legal execution order",
+          "failed_tool": null
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "topk_recovery": {
+      "attempts": [
+        {
+          "success": false,
+          "valid": false,
+          "executed": [],
+          "cost": 0.0,
+          "artifact": null,
+          "error": "infeasible set or no legal execution order",
+          "failed_tool": null
+        }
+      ],
+      "success": false,
+      "total_cost": 0.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_csv"
+          ],
+          "cost": 6.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nNorth,,False,True,median,csv,USD,3.07254785\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 3.07254785
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_csv"
+          ],
+          "cost": 6.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nNorth,,False,True,median,csv,USD,3.07254785\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 3.07254785
+        }
+      ],
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_static": {
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_csv"
+          ],
+          "cost": 6.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nNorth,,False,True,median,csv,USD,3.07254785\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 3.07254785
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_recovery": {
+      "attempts": [
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_primary",
+            "filter_region",
+            "subtract_refunds",
+            "convert_usd",
+            "median_values",
+            "report_csv"
+          ],
+          "cost": 6.0,
+          "artifact": "region,period,settled_only,net,statistic,format,currency,value\r\nNorth,,False,True,median,csv,USD,3.07254785\r\n",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 3.07254785
+        }
+      ],
+      "success": true,
+      "total_cost": 6.0,
+      "replanned": false,
+      "logical_model_requests": 1
+    }
+  }
+}

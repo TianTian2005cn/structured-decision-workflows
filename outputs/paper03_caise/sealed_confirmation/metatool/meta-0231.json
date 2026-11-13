@@ -1,0 +1,28 @@
+{
+  "id": "meta-0231",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "topk": [
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "v2_cover": [
+      "TripAdviceTool",
+      "TripTool",
+      "WeatherTool"
+    ],
+    "v2_route": [
+      "TripAdviceTool",
+      "TripTool"
+    ]
+  },
+  "gold": [
+    "TripAdviceTool",
+    "WeatherTool"
+  ],
+  "requests": 2
+}

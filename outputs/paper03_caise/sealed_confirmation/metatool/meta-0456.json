@@ -1,0 +1,23 @@
+{
+  "id": "meta-0456",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "ProductSearch"
+    ],
+    "topk": [
+      "ProductSearch"
+    ],
+    "v2_cover": [
+      "ProductSearch"
+    ],
+    "v2_route": [
+      "ProductSearch"
+    ]
+  },
+  "gold": [
+    "NewsTool",
+    "ProductSearch"
+  ],
+  "requests": 2
+}

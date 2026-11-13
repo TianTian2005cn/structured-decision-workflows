@@ -1,0 +1,25 @@
+{
+  "id": "meta-0035",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "topk": [
+      "ResearchFinder"
+    ],
+    "v2_cover": [
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "v2_route": [
+      "ResearchFinder"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "ResearchFinder"
+  ],
+  "requests": 2
+}

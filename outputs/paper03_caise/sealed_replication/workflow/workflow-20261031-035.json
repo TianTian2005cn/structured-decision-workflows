@@ -1,0 +1,183 @@
+{
+  "id": "workflow-20261031-035",
+  "family": "f974e94b56c429ef412073cda89b4cecddb13343f18d9370802e8dae5cf52a03",
+  "difficulty": "read_failure",
+  "budget": 7.0,
+  "primary_fails": true,
+  "selections": {
+    "topk": [
+      "convert_usd",
+      "filter_region",
+      "mean_values",
+      "read_primary",
+      "report_json",
+      "subtract_refunds"
+    ],
+    "route": [
+      "convert_usd",
+      "filter_region",
+      "mean_values",
+      "read_primary",
+      "report_json"
+    ],
+    "route_constraints_off": [
+      "convert_usd",
+      "filter_region",
+      "mean_values",
+      "read_primary",
+      "report_json"
+    ]
+  },
+  "methods": {
+    "topk_static": {
+      "success": false,
+      "total_cost": 1.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": false,
+          "valid": true,
+          "executed": [],
+          "cost": 1.0,
+          "artifact": null,
+          "error": "primary source unavailable",
+          "failed_tool": "read_primary"
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "topk_recovery": {
+      "attempts": [
+        {
+          "success": false,
+          "valid": true,
+          "executed": [],
+          "cost": 1.0,
+          "artifact": null,
+          "error": "primary source unavailable",
+          "failed_tool": "read_primary"
+        },
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_backup",
+            "filter_region",
+            "convert_usd",
+            "mean_values",
+            "report_json"
+          ],
+          "cost": 6.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": false, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"average\", \"value\": 3.9428125625000003}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 3.9428125625000003
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": true,
+      "logical_model_requests": 2
+    },
+    "route_static": {
+      "success": false,
+      "total_cost": 1.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": false,
+          "valid": true,
+          "executed": [],
+          "cost": 1.0,
+          "artifact": null,
+          "error": "primary source unavailable",
+          "failed_tool": "read_primary"
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_recovery": {
+      "attempts": [
+        {
+          "success": false,
+          "valid": true,
+          "executed": [],
+          "cost": 1.0,
+          "artifact": null,
+          "error": "primary source unavailable",
+          "failed_tool": "read_primary"
+        },
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_backup",
+            "filter_region",
+            "convert_usd",
+            "mean_values",
+            "report_json"
+          ],
+          "cost": 6.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": false, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"average\", \"value\": 3.9428125625000003}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 3.9428125625000003
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": true,
+      "logical_model_requests": 2
+    },
+    "route_constraints_off_static": {
+      "success": false,
+      "total_cost": 1.0,
+      "replanned": false,
+      "attempts": [
+        {
+          "success": false,
+          "valid": true,
+          "executed": [],
+          "cost": 1.0,
+          "artifact": null,
+          "error": "primary source unavailable",
+          "failed_tool": "read_primary"
+        }
+      ],
+      "logical_model_requests": 1
+    },
+    "route_constraints_off_recovery": {
+      "attempts": [
+        {
+          "success": false,
+          "valid": true,
+          "executed": [],
+          "cost": 1.0,
+          "artifact": null,
+          "error": "primary source unavailable",
+          "failed_tool": "read_primary"
+        },
+        {
+          "success": true,
+          "valid": true,
+          "executed": [
+            "read_backup",
+            "filter_region",
+            "convert_usd",
+            "mean_values",
+            "report_json"
+          ],
+          "cost": 6.0,
+          "artifact": "{\"currency\": \"USD\", \"format\": \"json\", \"net\": false, \"period\": null, \"region\": \"North\", \"settled_only\": false, \"statistic\": \"average\", \"value\": 3.9428125625000003}",
+          "error": null,
+          "failed_tool": null,
+          "expected_value": 3.9428125625000003
+        }
+      ],
+      "success": true,
+      "total_cost": 7.0,
+      "replanned": true,
+      "logical_model_requests": 2
+    }
+  }
+}

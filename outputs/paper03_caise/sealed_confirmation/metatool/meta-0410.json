@@ -1,0 +1,27 @@
+{
+  "id": "meta-0410",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "MusicTool",
+      "ResearchFinder"
+    ],
+    "topk": [
+      "MusicTool",
+      "ResearchFinder"
+    ],
+    "v2_cover": [
+      "MusicTool",
+      "ResearchFinder"
+    ],
+    "v2_route": [
+      "MusicTool",
+      "ResearchFinder"
+    ]
+  },
+  "gold": [
+    "MusicTool",
+    "ResearchFinder"
+  ],
+  "requests": 2
+}

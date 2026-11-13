@@ -1,0 +1,27 @@
+{
+  "id": "meta-0012",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "ExchangeTool",
+      "TripTool"
+    ],
+    "topk": [
+      "ExchangeTool",
+      "TripTool"
+    ],
+    "v2_cover": [
+      "ExchangeTool",
+      "TripTool"
+    ],
+    "v2_route": [
+      "ExchangeTool",
+      "TripTool"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "TripTool"
+  ],
+  "requests": 2
+}

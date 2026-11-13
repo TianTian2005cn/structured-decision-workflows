@@ -1,0 +1,29 @@
+{
+  "id": "meta-0428",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "FinanceTool"
+    ],
+    "topk": [
+      "ChartTool",
+      "FinanceTool"
+    ],
+    "v2_cover": [
+      "ChartTool",
+      "FinanceTool",
+      "PDF&URLTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "v2_route": [
+      "ChartTool",
+      "FinanceTool"
+    ]
+  },
+  "gold": [
+    "FinanceTool",
+    "ResearchHelper"
+  ],
+  "requests": 2
+}

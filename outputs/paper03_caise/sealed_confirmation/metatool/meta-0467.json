@@ -1,0 +1,27 @@
+{
+  "id": "meta-0467",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "Discount",
+      "NewsTool"
+    ],
+    "topk": [
+      "Discount",
+      "NewsTool"
+    ],
+    "v2_cover": [
+      "Discount",
+      "NewsTool"
+    ],
+    "v2_route": [
+      "Discount",
+      "NewsTool"
+    ]
+  },
+  "gold": [
+    "Discount",
+    "NewsTool"
+  ],
+  "requests": 2
+}

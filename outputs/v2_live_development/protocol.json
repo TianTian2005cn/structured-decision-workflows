@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-30T09:20:19.192382+00:00",
+  "stage": "DEVELOPMENT_ONLY",
+  "model": "jev-1.14.0",
+  "limit": 32,
+  "order": [
+    0
+  ],
+  "inputs": {
+    "exam": "1ac6737174f60d3ac5f319a00c07b2a13a730040d1b080759e27ced57f0e10bf",
+    "multilabel": "ebce456eb123890c8f55049629e1ab88023f4577ed94e34753083845ffbe26c6",
+    "tools": "bba13c53184b16829a6a0c384acb01a824fcf0ad6cacfcfbdc72b0dc55e6103e"
+  },
+  "code_sha256": {
+    "jevset/v2.py": "51c78c6ff56a7a047ebd1c3567e5c54b1e23064d31196f544b244b29730c2bbb",
+    "jevset/algorithms.py": "2599407963651f575b2ff0e9d7b65822523665b7d2ebeeda87e3e7185db5e21b",
+    "jevset/schema.py": "18448236017bff070ed03a04248975501583e55d20f6b84f960514031c4496e0",
+    "jevset/workflow_v2.py": "b6e4336d5db4e5ad1e25debc687533ab514b525a9dac7792d9f6efdc4f536be1",
+    "jevset/baselines_v2.py": "f7751220f079805fce4d8033ae94b70e361e17d92a101d8f461c206f19fe71e9",
+    "scripts/run_v2_development.py": "cb92a4a913ae02b2a55e155c652914e3f9ec5e0731cde2b05d8f590c14b309cd"
+  },
+  "frozen_prior": "cf45eb277200f929560b0428c63ecdd83620652611a01d915fc1cfd71d4073c5",
+  "budget_per_task": {
+    "max_http_attempts": 500,
+    "max_input_tokens": 4000000
+  },
+  "choice_funnel": "native generative baseline implemented; no local model supplied; NOT evaluated with Jev",
+  "sealed_test_access": "No private files are opened by this runner."
+}

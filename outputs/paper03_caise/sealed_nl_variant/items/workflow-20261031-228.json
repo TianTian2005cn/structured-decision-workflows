@@ -1,0 +1,25 @@
+{
+  "id": "workflow-20261031-228",
+  "difficulty": "tight_budget",
+  "request_text": "Please compute the median gross (before refunds) transaction value in USD across all regions for the months 2026-07 through 2026-08, counting transactions of every status, delivered as a CSV report.",
+  "methods": {
+    "topk_static": {
+      "success": true,
+      "total_cost": 5.0
+    },
+    "topk_recovery": {
+      "success": true,
+      "total_cost": 5.0,
+      "replanned": false
+    },
+    "route_static": {
+      "success": true,
+      "total_cost": 5.0
+    },
+    "route_recovery": {
+      "success": true,
+      "total_cost": 5.0,
+      "replanned": false
+    }
+  }
+}

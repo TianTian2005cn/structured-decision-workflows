@@ -1,0 +1,29 @@
+{
+  "id": "meta-0270",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "Discount",
+      "MusicTool",
+      "ProductSearch"
+    ],
+    "topk": [
+      "Discount",
+      "MusicTool"
+    ],
+    "v2_cover": [
+      "Discount",
+      "MusicTool",
+      "ProductSearch"
+    ],
+    "v2_route": [
+      "Discount",
+      "MusicTool"
+    ]
+  },
+  "gold": [
+    "Discount",
+    "MusicTool"
+  ],
+  "requests": 2
+}

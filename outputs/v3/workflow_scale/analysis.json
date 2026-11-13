@@ -1,0 +1,546 @@
+{
+  "status": "EXPANDED DEVELOPMENT, NOT FINAL TEST",
+  "n": 400,
+  "methods": {
+    "topk_static": {
+      "success_rate": 0.395,
+      "success_n": 158,
+      "n": 400,
+      "mean_tool_cost": 4.2025,
+      "mean_cost_given_success": 8.683544303797468,
+      "all_attempt_cost_per_success": 10.639240506329115,
+      "logical_model_requests_mean": 1.0,
+      "mean_replans": 0.0,
+      "worst_observed_cohort_failure": 0.79,
+      "by_cohort": {
+        "basic": {
+          "success_rate": 0.5,
+          "success_n": 50,
+          "n": 100,
+          "failure_ci95": [
+            0.4038315303659957,
+            0.5961684696340044
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6211630503053959
+        },
+        "medium": {
+          "success_rate": 0.44,
+          "success_n": 44,
+          "n": 100,
+          "failure_ci95": [
+            0.4622810465167699,
+            0.653279733698392
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6768157859347124
+        },
+        "hard": {
+          "success_rate": 0.43,
+          "success_n": 43,
+          "n": 100,
+          "failure_ci95": [
+            0.47215389549212305,
+            0.6626670147588988
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6859296398838701
+        },
+        "transfer": {
+          "success_rate": 0.21,
+          "success_n": 21,
+          "n": 100,
+          "failure_ci95": [
+            0.7002003116591013,
+            0.858343459380847
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.8731303544685873
+        }
+      },
+      "clustered_success": {
+        "estimate": 0.395,
+        "ci95": [
+          0.3475,
+          0.4425
+        ],
+        "n_rows": 400,
+        "n_clusters": 100,
+        "inference": "exploratory cluster bootstrap, not final-test significance"
+      }
+    },
+    "topk_recovery": {
+      "success_rate": 0.4125,
+      "success_n": 165,
+      "n": 400,
+      "mean_tool_cost": 4.405,
+      "mean_cost_given_success": 8.793939393939393,
+      "all_attempt_cost_per_success": 10.67878787878788,
+      "logical_model_requests_mean": 1.1425,
+      "mean_replans": 0.1425,
+      "worst_observed_cohort_failure": 0.76,
+      "by_cohort": {
+        "basic": {
+          "success_rate": 0.52,
+          "success_n": 52,
+          "n": 100,
+          "failure_ci95": [
+            0.384645517580519,
+            0.5768342223477603
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6022462162110884
+        },
+        "medium": {
+          "success_rate": 0.44,
+          "success_n": 44,
+          "n": 100,
+          "failure_ci95": [
+            0.4622810465167699,
+            0.653279733698392
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6768157859347124
+        },
+        "hard": {
+          "success_rate": 0.45,
+          "success_n": 45,
+          "n": 100,
+          "failure_ci95": [
+            0.4524460299744214,
+            0.6438546202048802
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6676553645080011
+        },
+        "transfer": {
+          "success_rate": 0.24,
+          "success_n": 24,
+          "n": 100,
+          "failure_ci95": [
+            0.6676766365018553,
+            0.8330867444305122
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.8493457962716
+        }
+      },
+      "clustered_success": {
+        "estimate": 0.4125,
+        "ci95": [
+          0.365,
+          0.46
+        ],
+        "n_rows": 400,
+        "n_clusters": 100,
+        "inference": "exploratory cluster bootstrap, not final-test significance"
+      }
+    },
+    "route_static": {
+      "success_rate": 0.725,
+      "success_n": 290,
+      "n": 400,
+      "mean_tool_cost": 6.7475,
+      "mean_cost_given_success": 8.582758620689654,
+      "all_attempt_cost_per_success": 9.306896551724138,
+      "logical_model_requests_mean": 1.0,
+      "mean_replans": 0.0,
+      "worst_observed_cohort_failure": 0.39,
+      "by_cohort": {
+        "basic": {
+          "success_rate": 0.86,
+          "success_n": 86,
+          "n": 100,
+          "failure_ci95": [
+            0.08526343659939133,
+            0.22137188210963832
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.24784062901797466
+        },
+        "medium": {
+          "success_rate": 0.8,
+          "success_n": 80,
+          "n": 100,
+          "failure_ci95": [
+            0.1333669333310325,
+            0.28882916559315885
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.3161348754293585
+        },
+        "hard": {
+          "success_rate": 0.61,
+          "success_n": 61,
+          "n": 100,
+          "failure_ci95": [
+            0.3001687400639442,
+            0.48796982954159257
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.5148303274455936
+        },
+        "transfer": {
+          "success_rate": 0.63,
+          "success_n": 63,
+          "n": 100,
+          "failure_ci95": [
+            0.2818236053432453,
+            0.46779470419057084
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.49487872269645505
+        }
+      },
+      "clustered_success": {
+        "estimate": 0.725,
+        "ci95": [
+          0.6775,
+          0.77
+        ],
+        "n_rows": 400,
+        "n_clusters": 100,
+        "inference": "exploratory cluster bootstrap, not final-test significance"
+      }
+    },
+    "route_recovery": {
+      "success_rate": 0.84,
+      "success_n": 336,
+      "n": 400,
+      "mean_tool_cost": 8.7275,
+      "mean_cost_given_success": 8.851190476190476,
+      "all_attempt_cost_per_success": 10.389880952380953,
+      "logical_model_requests_mean": 1.22,
+      "mean_replans": 0.22,
+      "worst_observed_cohort_failure": 0.31000000000000005,
+      "by_cohort": {
+        "basic": {
+          "success_rate": 0.96,
+          "success_n": 96,
+          "n": 100,
+          "failure_ci95": [
+            0.01566330399154762,
+            0.09837071435887917
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.12164336112534146
+        },
+        "medium": {
+          "success_rate": 0.88,
+          "success_n": 88,
+          "n": 100,
+          "failure_ci95": [
+            0.06999406437019487,
+            0.1981209942671142
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.2241615505355286
+        },
+        "hard": {
+          "success_rate": 0.69,
+          "success_n": 69,
+          "n": 100,
+          "failure_ci95": [
+            0.22779697212376038,
+            0.40626055719489407
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.43378534059060603
+        },
+        "transfer": {
+          "success_rate": 0.83,
+          "success_n": 83,
+          "n": 100,
+          "failure_ci95": [
+            0.1089356611405993,
+            0.2554800476760112
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.28244371027323656
+        }
+      },
+      "clustered_success": {
+        "estimate": 0.84,
+        "ci95": [
+          0.8,
+          0.8775
+        ],
+        "n_rows": 400,
+        "n_clusters": 100,
+        "inference": "exploratory cluster bootstrap, not final-test significance"
+      }
+    },
+    "route_constraints_off_static": {
+      "success_rate": 0.56,
+      "success_n": 224,
+      "n": 400,
+      "mean_tool_cost": 5.2,
+      "mean_cost_given_success": 8.607142857142858,
+      "all_attempt_cost_per_success": 9.285714285714286,
+      "logical_model_requests_mean": 1.0,
+      "mean_replans": 0.0,
+      "worst_observed_cohort_failure": 0.5700000000000001,
+      "by_cohort": {
+        "basic": {
+          "success_rate": 0.86,
+          "success_n": 86,
+          "n": 100,
+          "failure_ci95": [
+            0.08526343659939133,
+            0.22137188210963832
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.24784062901797466
+        },
+        "medium": {
+          "success_rate": 0.47,
+          "success_n": 47,
+          "n": 100,
+          "failure_ci95": [
+            0.43288856970099365,
+            0.6248918204065872
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6491959313124961
+        },
+        "hard": {
+          "success_rate": 0.48,
+          "success_n": 48,
+          "n": 100,
+          "failure_ci95": [
+            0.4231657776522397,
+            0.615354482419481
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6398973386495992
+        },
+        "transfer": {
+          "success_rate": 0.43,
+          "success_n": 43,
+          "n": 100,
+          "failure_ci95": [
+            0.47215389549212305,
+            0.6626670147588988
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6859296398838701
+        }
+      },
+      "clustered_success": {
+        "estimate": 0.56,
+        "ci95": [
+          0.51,
+          0.61
+        ],
+        "n_rows": 400,
+        "n_clusters": 100,
+        "inference": "exploratory cluster bootstrap, not final-test significance"
+      }
+    },
+    "route_constraints_off_recovery": {
+      "success_rate": 0.605,
+      "success_n": 242,
+      "n": 400,
+      "mean_tool_cost": 5.6425,
+      "mean_cost_given_success": 8.739669421487603,
+      "all_attempt_cost_per_success": 9.326446280991735,
+      "logical_model_requests_mean": 1.155,
+      "mean_replans": 0.155,
+      "worst_observed_cohort_failure": 0.53,
+      "by_cohort": {
+        "basic": {
+          "success_rate": 0.95,
+          "success_n": 95,
+          "n": 100,
+          "failure_ci95": [
+            0.02154367915436798,
+            0.11175046923191911
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.1354804903726641
+        },
+        "medium": {
+          "success_rate": 0.48,
+          "success_n": 48,
+          "n": 100,
+          "failure_ci95": [
+            0.4231657776522397,
+            0.615354482419481
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6398973386495992
+        },
+        "hard": {
+          "success_rate": 0.52,
+          "success_n": 52,
+          "n": 100,
+          "failure_ci95": [
+            0.384645517580519,
+            0.5768342223477603
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6022462162110884
+        },
+        "transfer": {
+          "success_rate": 0.47,
+          "success_n": 47,
+          "n": 100,
+          "failure_ci95": [
+            0.43288856970099365,
+            0.6248918204065872
+          ],
+          "simultaneous_failure_upper_95_bonferroni": 0.6491959313124961
+        }
+      },
+      "clustered_success": {
+        "estimate": 0.605,
+        "ci95": [
+          0.5525,
+          0.655
+        ],
+        "n_rows": 400,
+        "n_clusters": 100,
+        "inference": "exploratory cluster bootstrap, not final-test significance"
+      }
+    }
+  },
+  "effects": {
+    "route_without_recovery": {
+      "estimate": 0.33,
+      "ci95": [
+        0.28,
+        0.3825
+      ],
+      "n_rows": 400,
+      "n_clusters": 100,
+      "inference": "exploratory cluster bootstrap, not final-test significance"
+    },
+    "recovery_without_route": {
+      "estimate": 0.0175,
+      "ci95": [
+        0.005,
+        0.0325
+      ],
+      "n_rows": 400,
+      "n_clusters": 100,
+      "inference": "exploratory cluster bootstrap, not final-test significance"
+    },
+    "joint_gain": {
+      "estimate": 0.445,
+      "ci95": [
+        0.3975,
+        0.4925
+      ],
+      "n_rows": 400,
+      "n_clusters": 100,
+      "inference": "exploratory cluster bootstrap, not final-test significance"
+    },
+    "route_recovery_interaction": {
+      "estimate": 0.0975,
+      "ci95": [
+        0.0675,
+        0.13
+      ],
+      "n_rows": 400,
+      "n_clusters": 100,
+      "inference": "exploratory cluster bootstrap, not final-test significance"
+    },
+    "matched_constraints_without_recovery": {
+      "estimate": 0.165,
+      "ci95": [
+        0.125,
+        0.21
+      ],
+      "n_rows": 400,
+      "n_clusters": 100,
+      "inference": "exploratory cluster bootstrap, not final-test significance"
+    },
+    "matched_constraints_with_recovery": {
+      "estimate": 0.235,
+      "ci95": [
+        0.1925,
+        0.28
+      ],
+      "n_rows": 400,
+      "n_clusters": 100,
+      "inference": "exploratory cluster bootstrap, not final-test significance"
+    },
+    "matched_constraint_recovery_interaction": {
+      "estimate": 0.07,
+      "ci95": [
+        0.045,
+        0.0975
+      ],
+      "n_rows": 400,
+      "n_clusters": 100,
+      "inference": "exploratory cluster bootstrap, not final-test significance"
+    }
+  },
+  "route_recovery_failure_breakdown": [
+    {
+      "cohort": "basic",
+      "reason": "wrong or absent report",
+      "n": 4
+    },
+    {
+      "cohort": "medium",
+      "reason": "wrong or absent report",
+      "n": 12
+    },
+    {
+      "cohort": "hard",
+      "reason": "wrong or absent report",
+      "n": 17
+    },
+    {
+      "cohort": "hard",
+      "reason": "injected failure: convert_usd",
+      "n": 11
+    },
+    {
+      "cohort": "hard",
+      "reason": "Frozen V2 refused replan after prior operation; failure retained",
+      "n": 1
+    },
+    {
+      "cohort": "hard",
+      "reason": "injected failure: median_values",
+      "n": 1
+    },
+    {
+      "cohort": "hard",
+      "reason": "injected failure: mean_values",
+      "n": 1
+    },
+    {
+      "cohort": "transfer",
+      "reason": "wrong or absent report",
+      "n": 17
+    }
+  ],
+  "paired_discordance_and_power_planning": {
+    "topk_static__route_recovery": {
+      "gain_only_n": 178,
+      "loss_only_n": 0,
+      "iid_approx_n_for_5pp_80pct_power": 776,
+      "warning": "planning approximation using development discordance; ignores clustering and selection uncertainty; not a confirmatory minimum"
+    },
+    "route_constraints_off_recovery__route_recovery": {
+      "gain_only_n": 94,
+      "loss_only_n": 0,
+      "iid_approx_n_for_5pp_80pct_power": 565,
+      "warning": "planning approximation using development discordance; ignores clustering and selection uncertainty; not a confirmatory minimum"
+    }
+  },
+  "pareto": [
+    {
+      "method": "topk_static",
+      "success_rate": 0.395,
+      "mean_tool_cost": 4.2025
+    },
+    {
+      "method": "topk_recovery",
+      "success_rate": 0.4125,
+      "mean_tool_cost": 4.405
+    },
+    {
+      "method": "route_static",
+      "success_rate": 0.725,
+      "mean_tool_cost": 6.7475
+    },
+    {
+      "method": "route_recovery",
+      "success_rate": 0.84,
+      "mean_tool_cost": 8.7275
+    },
+    {
+      "method": "route_constraints_off_static",
+      "success_rate": 0.56,
+      "mean_tool_cost": 5.2
+    },
+    {
+      "method": "route_constraints_off_recovery",
+      "success_rate": 0.605,
+      "mean_tool_cost": 5.6425
+    }
+  ],
+  "attribution": "Primary route factor includes scoring/routing and constraints. Matched constraint-off contrasts isolate the decoder constraint bundle, while the model sees the same registry.",
+  "cluster_definition": "100 underlying source ledger/request indices; clarification variants remain in their original source family. Original checkpoint hashes are retained for audit."
+}

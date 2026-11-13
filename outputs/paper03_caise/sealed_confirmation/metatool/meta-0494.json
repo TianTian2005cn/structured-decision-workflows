@@ -1,0 +1,29 @@
+{
+  "id": "meta-0494",
+  "route": "topk",
+  "selections": {
+    "threshold": [
+      "Discount",
+      "ProductComparison",
+      "ProductSearch"
+    ],
+    "topk": [
+      "Discount",
+      "ProductSearch"
+    ],
+    "v2_cover": [
+      "Discount",
+      "ProductComparison",
+      "ProductSearch"
+    ],
+    "v2_route": [
+      "Discount",
+      "ProductSearch"
+    ]
+  },
+  "gold": [
+    "Discount",
+    "ProductSearch"
+  ],
+  "requests": 2
+}
